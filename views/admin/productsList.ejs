@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="adminstyle/css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="adminstyle/css/admin.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+      crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <%- include('../partials/adminNav.ejs')%>
+        <!--Main layout-->
+  <main style="margin-top: 58px">
+    <div class="container pt-4">
+      <!-- Section: Main chart -->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header d-flex py-3 justify-content-center align-items-center">
+            <h5 class="mb-0 text-center"><strong>ProductsList</strong></h5>
+            <!-- <a class="text-success" href="addProducts"><button type="button" class="btn btn-outline-success justify-content-end">Add Products</button></a> -->
+          </div>
+        </div>
+      </section>
+      <!-- Section: Main chart -->
+    
+    <!-- Section: Main chart -->
+
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="card">
+          <!-- <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <strong>Sales Performance KPIs</strong>
+            </h5>
+          </div> -->
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% if(items.length){
+               
+                    for(var i = 0; i< items.length; i++) {%>  
+                  <tr>
+                    <th scope="row"><%= (i+1) %></th>
+                    <td><img style="height: 30px; width: 30px;" src="/img/product/<%= items[i].imageOne%>" alt=""></td>
+                    <td><%= items[i].productName%></td>
+                    <td><%= items[i].category%></td>
+                    <td>₹<%= items[i].price%></td>
+                    <td><%= items[i].status%></td>
+                    <td><a
+                      class="bt mx-2"
+                      href="#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-mdb-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                    
+                    <i class="bi bi-three-dots text-black"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a onclick="return confirm('are you want active <%= items[i].productName%> product data?')" class="dropdown-item" href="activeProduct<%= items[i]._id%>">Active</a></li>
+                      <li><a onclick="return confirm('are you want to inactive <%= items[i].productName%> product data?')" class="dropdown-item" href="inactiveProduct<%= items[i]._id%>">Inactive</a></li>
+                      <li><a class="dropdown-item " href="editProduct<%= items[i]._id%>">Edit</a></li>
+                    </ul>
+                    </td>
+                  </tr>
+                  <% }
+                         
+                 }else{ %>
+                     <tr>
+                        <td colspan="6" style="text-align: center;">No products</td>
+                     </tr>
+                  <% } %>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Sales Performance KPIs-->
+    </div>
+  </main>
+
+
+</body>
+
+      <!-- MDB -->
+  <script type="text/javascript" src="adminstyle/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="adminstyle/js/admin.js"></script>
+
+</html>

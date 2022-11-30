@@ -1,0 +1,1342 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:41:46 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home | Assyrian</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon
+        ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Google Fonts
+        ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic,600' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- font awesome CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- jquery-ui CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- social-likes_classic CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/social-likes_classic.css">
+    <!-- venobox CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/venobox.css">
+    <!-- owl.carousel CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- nivo slider CSS
+        ============================================ -->
+    <link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
+    <!-- animate CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <!-- main CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- style CSS
+        ============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+        ============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+        ============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body class="home">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <%- include('../partials/userNav.ejs') %>
+        <%var items%>
+            <div class="clear"></div>
+            <!-- slider start-->
+            <section class="slider-area">
+                <div class="bend niceties preview-2">
+                    <div id="ensign-nivoslider" class="slides">
+                        <img src="img/sliders/slider-1/<%= header[0].slider1.backgroundImage%>" alt="" title="#slider-direction-1" />
+                        <img src="img/sliders/slider-1/<%= header[0].slider2.backgroundImage%>" alt="" title="#slider-direction-2" />
+                    </div>
+                    <!-- direction 1 -->
+                    <div id="slider-direction-1" class="t-cn slider-direction slider-one">
+                        <!-- layer 1 -->
+                        <div class="layer-1-1">
+                            <img src="img/sliders/slider-1/<%= header[0].slider1.headImage%>" alt="" />
+                        </div>
+                        <!-- layer 2 -->
+                        <div class="layer-1-2">
+                            <h5 class="title2"><%= header[0].slider1.titleOne%></h5>
+                        </div>
+                        <!-- layer 3 -->
+                        <div class="layer-1-3">
+                            <h3 class="title3"><%= header[0].slider1.titleTwo%></h3>
+                        </div>
+                        <!-- layer 4 -->
+                        <div class="layer-1-4 d-none d-lg-block">
+                            <img src="img/sliders/slider-1/<%= header[0].slider1.smallTextImage%>" alt="" />
+                        </div>
+                        <!-- layer 5 -->
+                        <div class="layer-1-5">
+                            <h3 class="title5"><%= header[0].slider1.titleThree%></h3>
+                        </div>
+                        <!-- layer 6 -->
+                        <div class="layer-1-6">
+                            <img src="img/sliders/slider-1/4.png" alt="" />
+                        </div>
+                        <!-- layer 7 -->
+                        <div class="layer-1-7">
+                            <h5 class="title7"><%= header[0].slider1.titleFour%></h5>
+                        </div>
+                    </div>
+                    <!-- direction 2 -->
+                    <div id="slider-direction-2" class="slider-direction slider-two">
+                        <!-- layer 1 -->
+                        <div class="layer-2-1">
+                            <img src="img/sliders/slider-1/<%= header[0].slider2.headImage%>" alt="" />
+                        </div>
+                        <!-- layer 2 -->
+                        <div class="layer-2-2">
+                            <h5 class="title2"><%= header[0].slider2.titleOne%></h5>
+                        </div>
+                        <!-- layer 3 -->
+                        <div class="layer-2-3">
+                            <h3 class="title3"><%= header[0].slider2.titleTwo%></h3>
+                        </div>
+                        <!-- layer 4 -->
+                        <div class="layer-2-4 hidden-sm hidden-xs">
+                            <img src="img/sliders/slider-1/<%= header[0].slider2.smallTextImage%>" alt="" />
+                        </div>
+                        <!-- layer 5 -->
+                        <div class="layer-2-5">
+                            <h3 class="title5"><%= header[0].slider2.titleThree%></h3>
+                        </div>
+                        <!-- layer 6 -->
+                        <div class="layer-2-6">
+                            <img src="img/sliders/slider-1/4.png" alt="" />
+                        </div>
+                        <!-- layer 7 -->
+                        <div class="layer-2-7">
+                            <h5 class="title7"><%= header[0].slider2.titleFour%></h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- slider end-->
+            <!-- home banners area Start-->
+            <div class="home-banners-area1">
+                <div class="container">
+                    <div class="banner-list">
+                        <div class="row mb-n-lm-30px">
+                            <div class="col-md-4">
+                                <div class="single-banner">
+                                    <a href="#"><img src="img/banners/1.png" alt="banner img" /></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="single-banner">
+                                    <a href="#"><img src="img/banners/2.png" alt="banner img" /></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="single-banner">
+                                    <a href="#"><img src="img/banners/3.png" alt="banner img" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ home banners area End-->
+            <!-- Best seller product slider area Start-->
+            
+            <!--/ Best seller product slider area end-->
+            <!--Main banner area start-->
+            <div class="main-banner-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-6">
+                            <div class="banner-content-padding">
+                                <div class="banner-img">
+                                    <a href="#"><img src="img/banners/4.png" alt="banner picture" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-6">
+                            <div class="banner-content-padding">
+                                <div class="banner-content">
+                                    <h2>FROM <strong>$69.96</strong></h2>
+                                    <h1>MEN’S BAGS</h1>
+                                    <p><a href="#" class="button">VIEW COLLECTION</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Main banner area end-->
+            <div class="new-product-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <div class="col-md-12">
+                                <h3><span>NEW PRODUCTS</span>
+                                    <i class="cross-icon"><i></i></i>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="new-product-list">
+                            <div class="col-md-12 text-center fix">
+                                <div class="tab-menu">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation">
+                                            <a href="#clothings" class="active" aria-controls="clothings" role="tab"
+                                                data-bs-toggle="tab">CLOTHINGS</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#shoes" aria-controls="shoes" role="tab"
+                                                data-bs-toggle="tab">SHOES</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#bags" aria-controls="bags" role="tab"
+                                                data-bs-toggle="tab">bags</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#accessories" aria-controls="accessories" role="tab"
+                                                data-bs-toggle="tab">ACCESSORIES</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Tab panes -->
+                            <div class="clear"></div>
+                            <div class="product-list tab-content">
+                                <div role="tabpanel" class="tab-pane fade show active" id="clothings">
+                                    <div class="product-owl-active  indicator-style">
+                                        <%for(var i=0 ; i < items.length ; i++){ if(items[i].category=='clothings' ){ %>
+                                            <!-- single group start -->
+                                            <div class="product-group">
+
+
+
+                                                <!-- single item start -->
+                                                <div class="single-item">
+                                                    <div class="s-product-img">
+                                                        <!-- sale - new  -->
+                                                        <div class="sticker-icon">
+                                                            <span class="sticker-bg"></span>
+                                                            <span class="sale sticker-text">sale</span>
+                                                        </div>
+                                                        <!--/ sale - new -->
+                                                        <a href="#">
+                                                            <img alt="" src="/img/product/<%= items[i].imageOne%>"
+                                                                class="primary-image img-width">
+                                                            <img alt="" src="/img/product/<%= items[i].imageTwo%>"
+                                                                class="secondary-image img-width">
+                                                        </a>
+                                                        <div class="price-rate">
+                                                            <!-- Single product hover view-->
+                                                            <div class="global-table">
+                                                                <div class="global-row">
+                                                                    <div class="global-cell">
+                                                                        <div class="hover-view-content">
+                                                                            <a href="/viewProduct<%=items[i]._id%>"
+                                                                                class="modal-view detail-link quickview">View
+                                                                                product</a>
+                                                                            <div class="ratings">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <div class="star">
+                                                                                            <span class="yes"><i
+                                                                                                    class="fa fa-star-o"></i></span>
+                                                                                            <span class="yes"><i
+                                                                                                    class="fa fa-star-o"></i></span>
+                                                                                            <span class="yes"><i
+                                                                                                    class="fa fa-star-o"></i></span>
+                                                                                            <span class="yes"><i
+                                                                                                    class="fa fa-star-o"></i></span>
+                                                                                            <span><i
+                                                                                                    class="fa fa-star-o"></i></span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="price-box">
+                                                                                <p class="special-price"><span
+                                                                                        class="price">₹<%=
+                                                                                            items[i].price%></span></p>
+                                                                                <p class="old-price"> <span
+                                                                                        class="price"><del>₹<%=
+                                                                                                items[i].discount%>
+                                                                                        </del></span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--/ Single product hover view-->
+
+                                                        </div>
+                                                        <div class="pro-action">
+                                                            <div class="product-cart-area-list">
+                                                                
+                                                                    <div class="cart-btn btn-add-to-cart"><button
+                                                                            onclick="addToCart('<%= items[i]._id%>')"
+                                                                            class="bbts" type="submit"
+                                                                            style=" border: none;"><i
+                                                                                class="fa fa-shopping-cart"></i>ADD TO
+                                                                            CART
+                                                                        </button>
+                                                                    </div>
+
+                                                                <form action="addToWishlist/<%= items[i]._id%>"
+                                                                    method="post">
+                                                                    <div class="cart-btn right link-compare"><button
+                                                                            class="bbts" type="submit"
+                                                                            style=" border: none;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-placement="top"
+                                                                            title="Add To Wishlist"><i
+                                                                                class="fa fa-heart-o"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </form>
+                                                                <!-- <div class="cart-btn right link-wishlist"><a href="#" data-bs-toggle="tooltip" data-placement="top" title="Add To Compare"><i class="fa fa-retweet"></i>
+                                                    </a></div> -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-title">
+                                                        <a href="#">
+                                                            <%= items[i].productName%>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- single item end -->
+
+
+                                            </div>
+                                            <%}}%>
+                                                <!-- single group end -->
+                                    </div>
+                                </div>
+                                <!--/ CLOTHINGS item End -->
+                                <!-- shoes item start -->
+                                <div role="tabpanel" class="tab-pane fade" id="shoes">
+                                    <div class="product-owl-active  indicator-style">
+                                        <%for(var i=0 ; i < items.length ; i++){ if(items[i].category=='shoes' ){ %>
+                                            <!-- single group start -->
+                                            <div class="product-group">
+                                                <!-- single item start -->
+                                                <div class="row">
+                                                    <div class="col-md-3 col-sm-6">
+                                                        <div class="single-item">
+                                                            <div class="s-product-img">
+                                                                <!-- sale - new  -->
+                                                                <div class="sticker-icon">
+                                                                    <span class="sticker-bg"></span>
+                                                                    <span class="sale sticker-text">sale</span>
+                                                                </div>
+                                                                <!--/ sale - new -->
+                                                                <a href="#">
+                                                                    <img alt=""
+                                                                        src="/img/product/<%= items[i].imageOne%>"
+                                                                        class="primary-image">
+                                                                    <img alt=""
+                                                                        src="/img/product/<%= items[i].imageTwo%>"
+                                                                        class="secondary-image">
+                                                                </a>
+                                                                <div class="price-rate">
+                                                                    <!-- Single product hover view-->
+                                                                    <div class="global-table">
+                                                                        <div class="global-row">
+                                                                            <div class="global-cell">
+                                                                                <div class="hover-view-content">
+                                                                                    <a href="#"
+                                                                                        class="modal-view detail-link quickview"
+                                                                                        data-bs-toggle="modal"
+                                                                                        data-bs-target="#productModal">Quick
+                                                                                        View</a>
+                                                                                    <div class="ratings">
+                                                                                        <ul>
+                                                                                            <li>
+                                                                                                <div class="star">
+                                                                                                    <span class="yes"><i
+                                                                                                            class="fa fa-star-o"></i></span>
+                                                                                                    <span class="yes"><i
+                                                                                                            class="fa fa-star-o"></i></span>
+                                                                                                    <span class="yes"><i
+                                                                                                            class="fa fa-star-o"></i></span>
+                                                                                                    <span class="yes"><i
+                                                                                                            class="fa fa-star-o"></i></span>
+                                                                                                    <span><i
+                                                                                                            class="fa fa-star-o"></i></span>
+                                                                                                </div>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="price-box">
+                                                                                        <p class="special-price"><span
+                                                                                                class="price">₹<%=
+                                                                                                    items[i].price%>
+                                                                                            </span></p>
+                                                                                        <!-- <p class="old-price"> <span class="price"><del>£280.00</del></span></p> -->
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--/ Single product hover view-->
+                                                                </div>
+                                                                <div class="pro-action">
+                                                                    <div class="product-cart-area-list">
+                                                                        <div class="cart-btn btn-add-to-cart"><a
+                                                                                href="#"><i
+                                                                                    class="fa fa-shopping-cart"></i>ADD
+                                                                                TO CART
+                                                                            </a></div>
+                                                                        <div class="cart-btn right link-compare"><a
+                                                                                href="#" data-bs-toggle="tooltip"
+                                                                                data-placement="top"
+                                                                                title="Add To Wishlist"><i
+                                                                                    class="fa fa-heart-o"></i>
+                                                                            </a></div>
+                                                                        <div class="cart-btn right link-wishlist"><a
+                                                                                href="#" data-bs-toggle="tooltip"
+                                                                                data-placement="top"
+                                                                                title="Add To Compare"><i
+                                                                                    class="fa fa-retweet"></i>
+                                                                            </a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-title">
+                                                                <a href="#">
+                                                                    <%= items[i].productName%>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- single item end -->
+
+                                            </div>
+                                            <%}}%>
+                                                <!-- single group end -->
+                                    </div>
+                                </div>
+                                <!-- shoes item end -->
+                                <!-- bags item start -->
+                                <div role="tabpanel" class="tab-pane fade" id="bags">
+                                    <div class="product-owl-active  indicator-style">
+                                        <!-- single group start -->
+                                        <div class="product-group">
+                                            <!-- single item start -->
+                                            <div class="row">
+                                                <div class="col-md-3 col-sm-6">
+                                                    <div class="single-item">
+                                                        <div class="s-product-img">
+                                                            <!-- sale - new  -->
+                                                            <div class="sticker-icon">
+                                                                <span class="sticker-bg"></span>
+                                                                <span class="sale sticker-text">sale</span>
+                                                            </div>
+                                                            <!--/ sale - new -->
+                                                            <a href="#">
+                                                                <img alt="" src="img/product/23.jpg"
+                                                                    class="primary-image">
+                                                                <img alt="" src="img/product/24.jpg"
+                                                                    class="secondary-image">
+                                                            </a>
+                                                            <div class="price-rate">
+                                                                <!-- Single product hover view-->
+                                                                <div class="global-table">
+                                                                    <div class="global-row">
+                                                                        <div class="global-cell">
+                                                                            <div class="hover-view-content">
+                                                                                <a href="#"
+                                                                                    class="modal-view detail-link quickview"
+                                                                                    data-bs-toggle="modal"
+                                                                                    data-bs-target="#productModal">Quick
+                                                                                    View</a>
+                                                                                <div class="ratings">
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                            <div class="star">
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <div class="price-box">
+                                                                                    <p class="special-price"><span
+                                                                                            class="price">£75.00</span>
+                                                                                    </p>
+                                                                                    <p class="old-price"> <span
+                                                                                            class="price"><del>£80.00</del></span>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!--/ Single product hover view-->
+                                                            </div>
+                                                            <div class="pro-action">
+                                                                <div class="product-cart-area-list">
+                                                                    <div class="cart-btn btn-add-to-cart"><a href="#"><i
+                                                                                class="fa fa-shopping-cart"></i>ADD TO
+                                                                            CART
+                                                                        </a></div>
+                                                                    <div class="cart-btn right link-compare"><a href="#"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-placement="top"
+                                                                            title="Add To Wishlist"><i
+                                                                                class="fa fa-heart-o"></i>
+                                                                        </a></div>
+                                                                    <div class="cart-btn right link-wishlist"><a
+                                                                            href="#" data-bs-toggle="tooltip"
+                                                                            data-placement="top"
+                                                                            title="Add To Compare"><i
+                                                                                class="fa fa-retweet"></i>
+                                                                        </a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-title">
+                                                            <a href="#">Aenean eu tristique</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- single item end -->
+
+                                        </div>
+                                        <!-- single group end -->
+                                    </div>
+                                </div>
+                                <!--/ bags item end -->
+                                <!-- accessories item start -->
+                                <div role="tabpanel" class="tab-pane fade" id="accessories">
+                                    <div class="product-owl-active  indicator-style">
+                                        <!-- single group start -->
+                                        <div class="product-group">
+                                            <!-- single item start -->
+                                            <div class="row">
+                                                <div class="col-md-3 col-sm-6">
+                                                    <div class="single-item">
+                                                        <div class="s-product-img">
+                                                            <!-- sale - new  -->
+                                                            <div class="sticker-icon">
+                                                                <span class="sticker-bg"></span>
+                                                                <span class="sale sticker-text">sale</span>
+                                                            </div>
+                                                            <!--/ sale - new -->
+                                                            <a href="#">
+                                                                <img alt="" src="img/product/34.jpg"
+                                                                    class="primary-image">
+                                                                <img alt="" src="img/product/35.jpg"
+                                                                    class="secondary-image">
+                                                            </a>
+                                                            <div class="price-rate">
+                                                                <!-- Single product hover view-->
+                                                                <div class="global-table">
+                                                                    <div class="global-row">
+                                                                        <div class="global-cell">
+                                                                            <div class="hover-view-content">
+                                                                                <a href="#"
+                                                                                    class="modal-view detail-link quickview"
+                                                                                    data-bs-toggle="modal"
+                                                                                    data-bs-target="#productModal">Quick
+                                                                                    View</a>
+                                                                                <div class="ratings">
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                            <div class="star">
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span class="yes"><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                                <span><i
+                                                                                                        class="fa fa-star-o"></i></span>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <div class="price-box">
+                                                                                    <p class="special-price"><span
+                                                                                            class="price">£270.00</span>
+                                                                                    </p>
+                                                                                    <p class="old-price"> <span
+                                                                                            class="price"><del>£280.00</del></span>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!--/ Single product hover view-->
+                                                            </div>
+                                                            <div class="pro-action">
+                                                                <div class="product-cart-area-list">
+                                                                    <div class="cart-btn btn-add-to-cart"><a href="#"><i
+                                                                                class="fa fa-shopping-cart"></i>ADD TO
+                                                                            CART
+                                                                        </a></div>
+                                                                    <div class="cart-btn right link-compare"><a href="#"
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-placement="top"
+                                                                            title="Add To Wishlist"><i
+                                                                                class="fa fa-heart-o"></i>
+                                                                        </a></div>
+                                                                    <div class="cart-btn right link-wishlist"><a
+                                                                            href="#" data-bs-toggle="tooltip"
+                                                                            data-placement="top"
+                                                                            title="Add To Compare"><i
+                                                                                class="fa fa-retweet"></i>
+                                                                        </a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-title">
+                                                            <a href="#">Aenean eu tristique</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- single item end -->
+
+                                        </div>
+                                        <!-- single group end -->
+                                    </div>
+                                </div>
+                                <!--/ bags item end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--New product area End-->
+
+            <!--Blog area start-->
+            <div class="blog-1-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <div class="col-md-12">
+                                <h3><span>LATEST FROM THE BLOG</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-list-wrapper">
+                        <div class="blog-list indicator-style-1">
+                            <!-- Single blog item start-->
+                            <div class="blog-list-inner">
+                                <div class="single-blog">
+                                    <div class="item-inner">
+                                        <div class="images-container">
+                                            <a href="#">
+                                                <img src="img/blog/1.png" alt="">
+                                            </a>
+                                            <div class="des-container">
+                                                <a class="title-blog" href="#">
+                                                    <span>swimwear for women</span>
+                                                </a>
+                                                <p class="hidden-sm hidden-xs">Lorem Ipsum is that it has a more-or-less
+                                                    normal
+                                                    distribution of letters, as opposed to using... </p>
+                                                <a href="#" class="readmore">Continue reading</a>
+                                                <span class="author"><a
+                                                        href="http://bootexperts.com/">BootExperts</a></span>
+                                            </div>
+                                            <div class="date-comments">
+                                                <div class="time">
+                                                    <span class="date">
+                                                        <span class="word1">14</span>
+                                                        <span class="word2">March</span>
+                                                    </span>
+                                                </div>
+                                                <div class="comments">
+                                                    <span>
+                                                        <span class="word1">0</span>
+                                                        <span class="word2">comment</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single blog item end-->
+                            <!-- Single blog item start-->
+                            <div class="blog-list-inner">
+                                <div class="single-blog">
+                                    <div class="item-inner">
+                                        <div class="images-container">
+                                            <a href="#">
+                                                <img src="img/blog/2.png" alt="">
+                                            </a>
+                                            <div class="des-container">
+                                                <a class="title-blog" href="#">
+                                                    <span>swimwear for women</span>
+                                                </a>
+                                                <p class="hidden-sm hidden-xs">Lorem Ipsum is that it has a more-or-less
+                                                    normal
+                                                    distribution of letters, as opposed to using... </p>
+                                                <a href="#" class="readmore">Continue reading</a>
+                                                <span class="author"><a
+                                                        href="http://bootexperts.com/">BootExperts</a></span>
+                                            </div>
+                                            <div class="date-comments">
+                                                <div class="time">
+                                                    <span class="date">
+                                                        <span class="word1">10</span>
+                                                        <span class="word2">jun</span>
+                                                    </span>
+                                                </div>
+                                                <div class="comments">
+                                                    <span>
+                                                        <span class="word1">5</span>
+                                                        <span class="word2">comment</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single blog item end-->
+                            <!-- Single blog item start-->
+                            <div class="blog-list-inner">
+                                <div class="single-blog">
+                                    <div class="item-inner">
+                                        <div class="images-container">
+                                            <a href="#">
+                                                <img src="img/blog/3.png" alt="">
+                                            </a>
+                                            <div class="des-container">
+                                                <a class="title-blog" href="#">
+                                                    <span>swimwear for women</span>
+                                                </a>
+                                                <p class="hidden-sm hidden-xs">Lorem Ipsum is that it has a more-or-less
+                                                    normal
+                                                    distribution of letters, as opposed to using... </p>
+                                                <a href="#" class="readmore">Continue reading</a>
+                                                <span class="author"><a
+                                                        href="http://bootexperts.com/">BootExperts</a></span>
+                                            </div>
+                                            <div class="date-comments">
+                                                <div class="time">
+                                                    <span class="date">
+                                                        <span class="word1">28</span>
+                                                        <span class="word2">April</span>
+                                                    </span>
+                                                </div>
+                                                <div class="comments">
+                                                    <span>
+                                                        <span class="word1">07</span>
+                                                        <span class="word2">comment</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single blog item end-->
+                            <!-- Single blog item start-->
+                            <div class="blog-list-inner">
+                                <div class="single-blog">
+                                    <div class="item-inner">
+                                        <div class="images-container">
+                                            <a href="#">
+                                                <img src="img/blog/4.png" alt="">
+                                            </a>
+                                            <div class="des-container">
+                                                <a class="title-blog" href="#">
+                                                    <span>swimwear for women</span>
+                                                </a>
+                                                <p class="hidden-sm hidden-xs">Lorem Ipsum is that it has a more-or-less
+                                                    normal
+                                                    distribution of letters, as opposed to using... </p>
+                                                <a href="#" class="readmore">Continue reading</a>
+                                                <span class="author"><a
+                                                        href="http://bootexperts.com/">BootExperts</a></span>
+                                            </div>
+                                            <div class="date-comments">
+                                                <div class="time">
+                                                    <span class="date">
+                                                        <span class="word1">04</span>
+                                                        <span class="word2">March</span>
+                                                    </span>
+                                                </div>
+                                                <div class="comments">
+                                                    <span>
+                                                        <span class="word1">12</span>
+                                                        <span class="word2">comment</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single blog item end-->
+                            <!-- Single blog item start-->
+                            <div class="blog-list-inner">
+                                <div class="single-blog">
+                                    <div class="item-inner">
+                                        <div class="images-container">
+                                            <a href="#">
+                                                <img src="img/blog/5.png" alt="">
+                                            </a>
+                                            <div class="des-container">
+                                                <a class="title-blog" href="#">
+                                                    <span>swimwear for women</span>
+                                                </a>
+                                                <p class="hidden-sm hidden-xs">Lorem Ipsum is that it has a more-or-less
+                                                    normal
+                                                    distribution of letters, as opposed to using... </p>
+                                                <a href="#" class="readmore">Continue reading</a>
+                                                <span class="author"><a
+                                                        href="http://bootexperts.com/">BootExperts</a></span>
+                                            </div>
+                                            <div class="date-comments">
+                                                <div class="time">
+                                                    <span class="date">
+                                                        <span class="word1">12</span>
+                                                        <span class="word2">May</span>
+                                                    </span>
+                                                </div>
+                                                <div class="comments">
+                                                    <span>
+                                                        <span class="word1">45</span>
+                                                        <span class="word2">comment</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single blog item end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / Blog area end-->
+            <!--  testimonials area start-->
+            <div class="testimonials-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <div class="col-md-12">
+                                <h3><span>WHAT THEY SAY</span>
+                                    <i class="cross-icon"><i></i></i>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="testimonials-list">
+                            <!-- Single testimonial start-->
+                            <div class="col-md-12 text-center">
+                                <div class="single-testimonial">
+                                    <div class="testimonial-text">
+                                        <p>Etiam rhoncus congue arcu sed interdum. Cras dolor diam, accumsan eu aliquam
+                                            eu,
+                                            luctus vehicula velit. Nam eget tortor ut felis fermentum sodales ac eu
+                                            lacus</p>
+                                    </div>
+                                    <div class="author">
+                                        <span class="name">Elizabeth Taylor</span>
+                                        <span class="title">Designer of <a
+                                                href="http://bootexperts.com/">BootExperts</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single testimonial end-->
+                            <!-- Single testimonial start-->
+                            <div class="col-md-12 text-center">
+                                <div class="single-testimonial">
+                                    <div class="testimonial-text">
+                                        <p>Etiam rhoncus congue arcu sed interdum. Cras dolor diam, accumsan eu aliquam
+                                            eu,
+                                            luctus vehicula velit. Nam eget tortor ut felis fermentum sodales ac eu
+                                            lacus</p>
+                                    </div>
+                                    <div class="author">
+                                        <span class="name">Salim Rana</span>
+                                        <span class="title">Designer of <a
+                                                href="http://bootexperts.com/">BootExperts</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single testimonial end-->
+                            <!-- Single testimonial start-->
+                            <div class="col-md-12 text-center">
+                                <div class="single-testimonial">
+                                    <div class="testimonial-text">
+                                        <p>Etiam rhoncus congue arcu sed interdum. Cras dolor diam, accumsan eu aliquam
+                                            eu,
+                                            luctus vehicula velit. Nam eget tortor ut felis fermentum sodales ac eu
+                                            lacus</p>
+                                    </div>
+                                    <div class="author">
+                                        <span class="name">BM RAFIQ</span>
+                                        <span class="title">Designer of <a
+                                                href="http://bootexperts.com/">BootExperts</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single testimonial end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / testimonials area end-->
+            <!-- brand area start-->
+            <div class="home-brands-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="brands-list">
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/1.png" alt="brand image" /></a>
+                                </div>
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/2.png" alt="brand image" /></a>
+                                </div>
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/3.png" alt="brand image" /></a>
+                                </div>
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/4.png" alt="brand image" /></a>
+                                </div>
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/5.png" alt="brand image" /></a>
+                                </div>
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/1.png" alt="brand image" /></a>
+                                </div>
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/2.png" alt="brand image" /></a>
+                                </div>
+                                <div class="single-brand">
+                                    <a href="#"><img src="img/brand/3.png" alt="brand image" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / brand area end-->
+
+            <!-- Footer area-->
+            <div class="footer">
+                <!-- Footer top start-->
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 col-sm-12 col-xs-12">
+                                <div class="footer-top-left">
+                                    <h2 class="widget-title">Newsletter</h2>
+                                    <div class="subscribe-form-area">
+                                        <form action="#" method="post" class="subscribe-form">
+                                            <input type="text" placeholder="Enter your email..."
+                                                title="Enter your email..." name="text-field" id="text-field" />
+                                            <input type="submit" value="Subscribe" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-12 col-xs-12">
+                                <div class="footer-top-right">
+                                    <div class="social-icon-area">
+                                        <h2 class="widget-title">Follow Us</h2>
+                                        <ul class="social-icons">
+                                            <li>
+                                                <a href="#" data-placement="top" data-bs-toggle="tooltip"
+                                                    data-original-title="Facebook" class="facebook social-icon"
+                                                    target="_blank">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-placement="top" data-bs-toggle="tooltip"
+                                                    data-original-title="Twitter" class="twitter social-icon"
+                                                    target="_blank">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-placement="top" data-bs-toggle="tooltip"
+                                                    data-original-title="Tumblr" class="tumblr social-icon"
+                                                    target="_blank">
+                                                    <i class="fa fa-tumblr"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-placement="top" data-bs-toggle="tooltip"
+                                                    data-original-title="Google-plus" class="google-plus social-icon"
+                                                    target="_blank">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-placement="top" data-bs-toggle="tooltip"
+                                                    data-original-title="Dribbble" class="dribbble social-icon"
+                                                    target="_blank">
+                                                    <i class="fa fa-dribbble"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer top end-->
+                <!-- Footer middle start-->
+                <div class="footer-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-middle-menu">
+                                    <h3 class="widget-title">Our services</h3>
+                                    <div class="menu-our-services-container">
+                                        <ul class="nav_menu">
+                                            <li class="menu-item">
+                                                <a href="#">Shipping &amp; Returns</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Secure Shopping</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">International Shipping</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Affiliates</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-middle-menu">
+                                    <h3 class="widget-title">My Account</h3>
+                                    <div class="menu-my-account-container">
+                                        <ul class="nav_menu">
+                                            <li class="menu-item">
+                                                <a href="#">My Account</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Shopping cart</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Wishlist</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Custom Link</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Help</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-middle-menu">
+                                    <h3 class="widget-title">Infomation</h3>
+                                    <div class="menu-infomation-container">
+                                        <ul class="nav_menu">
+                                            <li class="menu-item">
+                                                <a href="#">Our Blog</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">About Our Shop</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Secure Shopping</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Privacy Policy</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">Delivery infomation</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-middle-menu">
+                                    <h3 class="widget-title">Contact Us</h3>
+                                    <div class="menu-contact-us-container">
+                                        <ul>
+                                            <li>
+                                                <i class="fa fa-map-marker"> </i>
+                                                Addresss: 123 Pall Mall, London England
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-envelope"> </i>
+                                                Email: admin@bootexperts.com
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-phone"> </i>
+                                                Phone: (+8801) 922262289
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer middle end-->
+                <!-- Footer bottom start-->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 col-sm-12 col-xs-12 fix">
+                                <div class="bottom_menu">
+                                    <div class="menu-customer-care-container">
+                                        <nav>
+                                            <ul class="nav_menu">
+                                                <li class="menu-item">
+                                                    <a href="contact-us.html">Contact us</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Sitemap</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Term &amp; Conditions</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Gift Vouchers</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">BestSellers</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="copyright-info">
+                                    Copyright &copy; 2021
+                                    <a href="https://hasthemes.com/">HasThemes.</a>
+                                    All Rights Reserved
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-12 col-xs-12">
+                                <div class="bottom-right">
+                                    <a href="#"><img src="img/pay/pay-visa.png" alt="pay-visa" /></a>
+                                    <a href="#"><img src="img/pay/pay-maestro.png" alt="pay-maestro" /></a>
+                                    <a href="#"><img src="img/pay/pay-discover.png" alt="pay-discover" /></a>
+                                    <a href="#"><img src="img/pay/pay-cirrus.png" alt="pay-cirrus" /></a>
+                                    <a href="#"><img src="img/pay/pay-bank.png" alt="pay-bank" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer bottom end-->
+            </div>
+            <!-- Footer area-->
+            <!-- QUICKVIEW PRODUCT -->
+            <%for(var i=0 ; i < items.length ; i++){ if(items){ %>
+                <div id="quickview-wrapper">
+                    <!-- Modal -->
+                    <div class="modal fade" id="<%=items[i].productName%>" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-product">
+                                        <div class="product-images">
+                                            <div class="main-image images">
+                                                <img alt="" src="img/product/50.jpg">
+                                            </div>
+                                        </div><!-- .product-images -->
+
+                                        <div class="product-info">
+                                            <h1>Aenean eu tristique</h1>
+                                            <div class="price-box-3">
+                                                <div class="s-price-box">
+                                                    <span class="new-price">£160.00</span>
+                                                    <span class="old-price">£190.00</span>
+                                                </div>
+                                            </div>
+                                            <a href="shop.html" class="see-all">See all features</a>
+                                            <div class="quick-add-to-cart">
+                                                <form method="post" class="cart">
+                                                    <div class="numbers-row">
+                                                        <input type="number" id="french-hens" value="3">
+                                                    </div>
+                                                    <button class="single_add_to_cart_button" type="submit">Add to
+                                                        cart</button>
+                                                </form>
+                                            </div>
+                                            <div class="quick-desc">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla
+                                                augue nec est
+                                                tristique auctor. Donec non est at libero.
+                                            </div>
+                                            <div class="social-sharing">
+                                                <div class="widget widget_socialsharing_widget">
+                                                    <h3 class="widget-title-modal">Share this product</h3>
+                                                    <ul class="social-icons">
+                                                        <li><a target="_blank" title="Facebook" href="#"
+                                                                class="facebook social-icon"><i
+                                                                    class="fa fa-facebook"></i></a></li>
+                                                        <li><a target="_blank" title="Twitter" href="#"
+                                                                class="twitter social-icon"><i
+                                                                    class="fa fa-twitter"></i></a></li>
+                                                        <li><a target="_blank" title="Pinterest" href="#"
+                                                                class="pinterest social-icon"><i
+                                                                    class="fa fa-pinterest"></i></a>
+                                                        </li>
+                                                        <li><a target="_blank" title="Google +" href="#"
+                                                                class="gplus social-icon"><i
+                                                                    class="fa fa-google-plus"></i></a></li>
+                                                        <li><a target="_blank" title="LinkedIn" href="#"
+                                                                class="linkedin social-icon"><i
+                                                                    class="fa fa-linkedin"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div><!-- .product-info -->
+                                    </div><!-- .modal-product -->
+                                </div><!-- .modal-body -->
+                            </div><!-- .modal-content -->
+                        </div><!-- .modal-dialog -->
+                    </div>
+                    <!-- END Modal -->
+                </div>
+                <% break; }}%>
+                    <!-- END QUICKVIEW PRODUCT -->
+
+                    <!-- jquery
+        ============================================ -->
+                    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+                    <!-- bootstrap JS
+        ============================================ -->
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+                        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                        crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+                        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+                        crossorigin="anonymous"></script>
+                    <!-- wow JS
+        ============================================ -->
+                    <script src="js/wow.min.js"></script>
+                    <!-- price-slider JS
+        ============================================ -->
+                    <script src="js/jquery-price-slider.js"></script>
+                    <!-- collapse JS
+        ============================================ -->
+                    <script src="js/jquery.collapse.js"></script>
+                    <!-- mixitup JS
+        ============================================ -->
+                    <script src="js/jquery.mixitup.js"></script>
+                    <!-- meanmenu JS
+        ============================================ -->
+                    <script src="js/jquery.meanmenu.js"></script>
+                    <!-- owl.carousel JS
+        ============================================ -->
+                    <script src="js/owl.carousel.min.js"></script>
+                    <!-- scrollUp JS
+        ============================================ -->
+                    <script src="js/jquery.scrollUp.min.js"></script>
+                    <!-- social-likes JS
+        ============================================ -->
+                    <script src="js/social-likes.min.js"></script>
+                    <!-- venobox JS
+        ============================================ -->
+                    <script src="js/venobox.js"></script>
+                    <!-- Nivo slider js
+        ============================================ -->
+                    <script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+                    <script src="lib/home.js" type="text/javascript"></script>
+                    <!-- plugins JS
+        ============================================ -->
+                    <script src="js/plugins.js"></script>
+                    <!-- main JS
+        ============================================ -->
+                    <script src="js/main.js"></script>
+
+</body>
+    
+<script>
+    function addToCart(productId) {
+		$.ajax({
+			url: '/addToCart',
+			data: {
+				productId: productId,
+				count : 1
+			},
+			method: 'post',
+			success: (resolve) => {
+				if (resolve.status == 'itemAddedToTheCart' || resolve.status == 'redirect') {
+                    window.location.href = '/shoppingCart'
+                }
+            }
+        })
+    }
+</script>
+
+
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:43:42 GMT -->
+
+</html>

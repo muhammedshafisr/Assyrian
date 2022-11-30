@@ -1,0 +1,703 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/product-simple.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:46 GMT -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Product simple | Assyrian</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- favicon
+		============================================ -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- Google Fonts
+		============================================ -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic,600' rel='stylesheet'
+		type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Bootstrap CSS
+		============================================ -->
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	<!-- font awesome CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- owl.carousel CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<!-- nivo slider CSS
+		============================================ -->
+	<link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+	<link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
+	<!-- animate CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- normalize CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- venobox CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/venobox.css">
+	<!-- social-likes_classic CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/social-likes_classic.css">
+	<!-- meanmenu CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/meanmenu.css">
+	<!-- main CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- style CSS
+		============================================ -->
+	<link rel="stylesheet" href="style.css">
+	<!-- responsive CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/responsive.css">
+
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<!-- modernizr JS
+		============================================ -->
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	
+	<link rel="stylesheet" href="css/imgzoomer.css">
+
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<!-- Add your site or application content here -->
+
+	<%- include('../partials/userNav.ejs') %>
+		<div style="position: fixed; z-index: 1000;" id="liveAlertPlaceholder"></div>
+		<!--/ Header -->
+		<div class="clear"></div>
+		<!-- main-container full-width -->
+		<div class="main-container">
+			<div class="entry-header">
+				<h1 class="entry-title">Product Simple</h1>
+			</div>
+			<div class="container">
+				<% var items, status%>
+					<div class="row">
+						<!-- product-simple-area start -->
+						<div class="product-simple-area">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-7 col-lg-7 col-sm-12 col-xs-12">
+										
+												<!-- Nav tabs -->
+
+												<div class="container">
+													<div class="">
+														<ul id="glasscase" class="gc-start">
+															<li><img src="/img/product/<%= items.imageOne%>" alt="Text"
+																	data-gc-caption="Your caption text" /></li>
+															<li><img src="/img/product/<%= items.imageTwo%>"
+																	alt="Text" /></li>
+															<!-- <li><img src="https://source.unsplash.com/featured?tEchnology" alt="Text" /></li>
+																	<li><img src="https://source.unsplash.com/featured?teChnology" alt="Text" /></li>
+																	<li><img src="https://source.unsplash.com/featured?TecHnology" alt="Text" /></li>
+																	<li><img src="https://source.unsplash.com/featured?TechNology" alt="Text" /></li> -->
+														</ul>
+													</div>
+												</div>
+
+												<script type="text/javascript">
+													$(document).ready(function () {
+														//If your <ul> has the id "glasscase"
+														$('#glasscase').glassCase({ 'thumbsPosition': 'bottom', 'widthDisplay': 560 });
+													});
+												</script>
+
+
+												<!-- <ul role="tablist" class="nav nav-tabs">
+													<li class="active" role="presentation"><a data-bs-toggle="tab"
+															role="tab" aria-controls="home" href="#home"
+															aria-expanded="true"><img class="img-fluid"
+																style="width:97px; height: 140px;"
+																src="/img/product/<%= items.imageOne%>" alt=""></a></li>
+													<li role="presentation"><a data-bs-toggle="tab" role="tab"
+															aria-controls="profile" href="#profile"
+															aria-expanded="false"><img class="img-fluid"
+																style="width:97px; height: 140px;"
+																style="background-size: cover;"
+																src="/img/product/<%= items.imageTwo%>" alt=""></a></li> -->
+												<!-- <li role="presentation" class=""><a data-bs-toggle="tab" role="tab" aria-controls="messages" href="#messages" aria-expanded="false"><img src="img/product/tab/s3.jpg" alt=""></a></li>
+											<li role="presentation" class=""><a data-bs-toggle="tab" role="tab" aria-controls="settings" href="#settings" aria-expanded="false"><img src="img/product/tab/s4.jpg" alt=""></a></li> -->
+												<!-- </ul> -->
+
+												<!-- Tab panes -->
+												<!-- <div class="tab-content"> -->
+												<!-- <div id="home" class="tab-pane active" role="tabpanel"><a
+															class="venobox" data-gall="myGallery"
+															href="/img/product/<%= items.imageOne%>"><img
+																src="/img/product/<%= items.imageOne%>" alt=""></a>
+													</div>
+													<div id="profile" class="tab-pane" role="tabpanel"><a
+															class="venobox" data-gall="myGallery"
+															href="/img/product/<%= items.imageTwo%>"><img
+																src="/img/product/<%= items.imageTwo%>" alt=""></a>
+													</div> -->
+												<!-- <div id="messages" class="tab-pane" role="tabpanel"><a class="venobox" data-gall="myGallery" href="img/product/tab/3.jpg"><img src="img/product/tab/3.jpg" alt=""></a></div>
+											<div id="settings" class="tab-pane" role="tabpanel"><a class="venobox" data-gall="myGallery" href="img/product/tab/4.jpg"><img src="img/product/tab/4.jpg" alt=""></a></div> -->
+												<!-- </div> -->
+											
+									</div>
+									<div class="col-xs-12 col-sm-12 col-lg-5">
+										<div class="single-product-info">
+											<div class="clear"></div>
+											<!-- <div class="product-nav">
+											<a href="#"><i class="fa fa-angle-left"></i></a>
+											<a href="#"><i class="fa fa-angle-right"></i></a>
+										</div> -->
+											<div class="pro-rating">
+												<a class="yes" href="#"><i class="fa fa-star-o"></i></a>
+												<a class="yes" href="#"><i class="fa fa-star-o"></i></a>
+												<a class="yes" href="#"><i class="fa fa-star-o"></i></a>
+												<a class="yes" href="#"><i class="fa fa-star-o"></i></a>
+												<a href="#"><i class="fa fa-star-o"></i></a>
+											</div>
+											<h1 class="product_title">
+												<%= items.productName%>
+											</h1>
+											<br>
+											<div class="product-details">
+												<h3>Product Details</h3>
+												<div class="row mt-3">
+													<div class="col-3">
+														<strong>Sleeve</strong>
+													</div>
+													<div class="col-9">
+														<strong>
+															<%= items.sleeve%>
+														</strong>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-3">
+														<strong>Fabric</strong>
+													</div>
+													<div class="col-9">
+														<strong>
+															<%= items.fabric%>
+														</strong>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-3">
+														<strong>Ideal for</strong>
+													</div>
+													<div class="col-9">
+														<strong>
+															<%= items.idealFor%>
+														</strong>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-3">
+														<strong>Size</strong>
+													</div>
+													<div class="col-9">
+														<strong>
+															<%= items.size%>
+														</strong>
+													</div>
+												</div>
+												<div class="row mt-3">
+													<div class="col-3">
+														<strong>Pack of</strong>
+													</div>
+													<div class="col-9">
+														<strong>
+															<%= items.packOf%>
+														</strong>
+													</div>
+												</div>
+											</div>
+
+											<%if(items.status=='instock'){%>
+												<div class="stock-status">
+													<label>In stock</label>
+												</div>
+												<div class="short-description">
+													<p>
+														<%= items.description%>
+													</p>
+												</div>
+												<div class="s-price-box">
+													<span class="new-price">₹<%= items.price%></span>
+													<span class="old-price">₹<%= items.discount%></span>
+												</div>
+
+												<div class="quantity1">
+													<input type="number" name="count" id="count" value="1" />
+													<!-- <input type="hidden" name="productId" value=""> -->
+													<% if ( !status ) {%>
+														<button type="button" id="liveAlertBtn"
+															onclick="addToCart('<%= items._id%>')"><i
+																class="fa fa-shopping-cart"></i>Add to cart</button>
+														<%} else{%>
+															<a class="add-to-cart d-flex align-items-center"
+																href="shoppingCart">
+																<button style="width:100%; height: 100%;"
+																	type="button"><i class="fa fa-shopping-cart"></i>Go
+																	to cart</button>
+															</a>
+															<a class="add-to-cart d-flex align-items-center"
+																style="margin-left: 40px;" href="#">
+																<button style="width:100%; height: 100%;"
+																	type="button"><i
+																		class="bi bi-lightning-charge-fill"></i>
+																	Buy Now</button>
+															</a>
+															<%}%>
+												</div>
+
+												<%}else{%>
+
+													<div class="stock-status">
+														<label>currently unavailable</label>
+													</div>
+
+													<%}%>
+
+														<!-- <div class="product_meta">
+											<span class="posted_in">Categories: <a rel="tag" href="#">Clothings</a>, <a rel="tag" href="#">Women</a></span>
+											<span class="tagged_as">Tags: <a rel="tag" href="#">electronic</a>, <a rel="tag" href="#">laptop</a></span>
+											
+										</div> -->
+														<!-- <div class="share_buttons">
+											<div class="social-likes">
+												<div class="facebook" title="Share link on Facebook">Facebook</div>
+												<div class="twitter" title="Share link on Twitter">Twitter</div>
+												<div class="plusone" title="Share link on Google+">Google+</div>
+											</div>
+										</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- product-simple-area end -->
+					</div>
+			</div>
+
+
+
+			<!-- / brand area end-->
+			<!-- main-container full-width end -->
+
+
+			<!------ Include the above in your HEAD tag ---------->
+
+			<!-- Footer area-->
+			<div class="footer">
+				<!-- Footer top start-->
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 col-sm-12 col-xs-12">
+								<div class="footer-top-left">
+									<h2 class="widget-title">Newsletter</h2>
+									<div class="subscribe-form-area">
+										<form action="#" method="post" class="subscribe-form">
+											<input type="text" placeholder="Enter your email..."
+												title="Enter your email..." name="text-field" id="text-field" />
+											<input type="submit" value="Subscribe" />
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5 col-sm-12 col-xs-12">
+								<div class="footer-top-right">
+									<div class="social-icon-area">
+										<h2 class="widget-title">Follow Us</h2>
+										<ul class="social-icons">
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Facebook" class="facebook social-icon"
+													target="_blank">
+													<i class="fa fa-facebook"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Twitter" class="twitter social-icon"
+													target="_blank">
+													<i class="fa fa-twitter"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Tumblr" class="tumblr social-icon"
+													target="_blank">
+													<i class="fa fa-tumblr"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Google-plus" class="google-plus social-icon"
+													target="_blank">
+													<i class="fa fa-google-plus"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Dribbble" class="dribbble social-icon"
+													target="_blank">
+													<i class="fa fa-dribbble"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Footer top end-->
+				<!-- Footer middle start-->
+				<div class="footer-middle">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">Our services</h3>
+									<div class="menu-our-services-container">
+										<ul class="nav_menu">
+											<li class="menu-item">
+												<a href="#">Shipping &amp; Returns</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Secure Shopping</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">International Shipping</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Affiliates</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Contact</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">My Account</h3>
+									<div class="menu-my-account-container">
+										<ul class="nav_menu">
+											<li class="menu-item">
+												<a href="#">My Account</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Shopping cart</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Wishlist</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Custom Link</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Help</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">Infomation</h3>
+									<div class="menu-infomation-container">
+										<ul class="nav_menu">
+											<li class="menu-item">
+												<a href="#">Our Blog</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">About Our Shop</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Secure Shopping</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Privacy Policy</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Delivery infomation</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">Contact Us</h3>
+									<div class="menu-contact-us-container">
+										<ul>
+											<li>
+												<i class="fa fa-map-marker"> </i>
+												Addresss: 123 Pall Mall, London England
+											</li>
+											<li>
+												<i class="fa fa-envelope"> </i>
+												Email: admin@bootexperts.com
+											</li>
+											<li>
+												<i class="fa fa-phone"> </i>
+												Phone: (+8801) 922262289
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Footer middle end-->
+				<!-- Footer bottom start-->
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 col-sm-12 col-xs-12 fix">
+								<div class="bottom_menu">
+									<div class="menu-customer-care-container">
+										<nav>
+											<ul class="nav_menu">
+												<li class="menu-item">
+													<a href="contact-us.html">Contact us</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Sitemap</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Term &amp; Conditions</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Gift Vouchers</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">BestSellers</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+								<div class="copyright-info">
+									Copyright &copy; 2021
+									<a href="https://hasthemes.com/">HasThemes.</a>
+									All Rights Reserved
+								</div>
+							</div>
+							<div class="col-lg-5 col-sm-12 col-xs-12">
+								<div class="bottom-right">
+									<a href="#"><img src="img/pay/pay-visa.png" alt="pay-visa" /></a>
+									<a href="#"><img src="img/pay/pay-maestro.png" alt="pay-maestro" /></a>
+									<a href="#"><img src="img/pay/pay-discover.png" alt="pay-discover" /></a>
+									<a href="#"><img src="img/pay/pay-cirrus.png" alt="pay-cirrus" /></a>
+									<a href="#"><img src="img/pay/pay-bank.png" alt="pay-bank" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Footer bottom end-->
+			</div>
+			<!-- Footer area-->
+			<!-- QUICKVIEW PRODUCT -->
+			<div id="quickview-wrapper">
+				<!-- Modal -->
+				<div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+										aria-hidden="true">&times;</span></button>
+							</div>
+							<div class="modal-body">
+								<div class="modal-product">
+									<div class="product-images">
+										<div class="main-image images">
+											<img alt="" src="img/product/50.jpg">
+										</div>
+									</div><!-- .product-images -->
+
+									<div class="product-info">
+										<h1>Aenean eu tristique</h1>
+										<div class="price-box-3">
+											<div class="s-price-box">
+												<span class="new-price">£160.00</span>
+												<span class="old-price">£190.00</span>
+											</div>
+										</div>
+										<a href="shop.html" class="see-all">See all features</a>
+										<div class="quick-add-to-cart">
+											<form method="post" class="cart">
+												<div class="numbers-row">
+													<input type="number" id="french-hens" value="3">
+												</div>
+												<button class="single_add_to_cart_button" type="submit">Add to
+													cart</button>
+											</form>
+										</div>
+										<div class="quick-desc">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
+											nec
+											est tristique auctor. Donec non est at libero.
+										</div>
+										<div class="social-sharing">
+											<div class="widget widget_socialsharing_widget">
+												<h3 class="widget-title-modal">Share this product</h3>
+												<ul class="social-icons">
+													<li><a target="_blank" title="Facebook" href="#"
+															class="facebook social-icon"><i
+																class="fa fa-facebook"></i></a>
+													</li>
+													<li><a target="_blank" title="Twitter" href="#"
+															class="twitter social-icon"><i
+																class="fa fa-twitter"></i></a>
+													</li>
+													<li><a target="_blank" title="Pinterest" href="#"
+															class="pinterest social-icon"><i
+																class="fa fa-pinterest"></i></a></li>
+													<li><a target="_blank" title="Google +" href="#"
+															class="gplus social-icon"><i
+																class="fa fa-google-plus"></i></a>
+													</li>
+													<li><a target="_blank" title="LinkedIn" href="#"
+															class="linkedin social-icon"><i
+																class="fa fa-linkedin"></i></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div><!-- .product-info -->
+								</div><!-- .modal-product -->
+							</div><!-- .modal-body -->
+						</div><!-- .modal-content -->
+					</div><!-- .modal-dialog -->
+				</div>
+				<!-- END Modal -->
+			</div>
+			<!-- END QUICKVIEW PRODUCT -->
+
+			<!-- jquery
+		============================================ -->
+			<script src="js/vendor/jquery-1.12.4.min.js"></script>
+			<!-- bootstrap JS
+		============================================ -->
+			<!-- <script src="js/bootstrap.min.js"></script> -->
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+				integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+				crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+				integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+				crossorigin="anonymous"></script>
+			<!-- wow JS
+		============================================ -->
+			<script src="js/wow.min.js"></script>
+			<!-- venobox JS
+		============================================ -->
+			<script src="js/venobox.js"></script>
+
+			<!-- social-likes.min JS
+		============================================ -->
+			<script src="js/social-likes.min.js"></script>
+			<!-- price-slider JS
+		============================================ -->
+			<script src="js/jquery-price-slider.js"></script>
+			<!-- meanmenu JS
+		============================================ -->
+			<script src="js/jquery.meanmenu.js"></script>
+			<!-- owl.carousel JS
+		============================================ -->
+			<script src="js/owl.carousel.min.js"></script>
+			<!-- mixitup JS
+		============================================ -->
+			<script src="js/jquery.mixitup.js"></script>
+			<!-- scrollUp JS
+		============================================ -->
+			<script src="js/jquery.scrollUp.min.js"></script>
+			<!-- Nivo slider js
+		============================================ -->
+			<script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+			<script src="lib/home.js" type="text/javascript"></script>
+			<!-- plugins JS
+		============================================ -->
+			<script src="js/plugins.js"></script>
+			<!-- main JS
+		============================================ -->
+			<script src="js/main.js"></script>
+
+</body>
+
+<script>
+
+	function addToCart(productId) {
+		const count = document.getElementById('count').value
+		$.ajax({
+			url: '/addToCart',
+			data: {
+				productId: productId,
+				count: count
+			},
+			method: 'post',
+			success: (resolve) => {
+				if (resolve.status == 'itemAddedToTheCart') {
+
+					let cartCount = document.getElementById('cartCount').innerHTML
+					document.getElementById('cartCount').innerHTML = Number(cartCount) + 1
+					const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+					const alert = (message, type) => {
+						const wrapper = document.createElement('div')
+						wrapper.innerHTML = [
+							`<div class="alert alert-${type} alert-dismissible" role="alert">`,
+							`   <div>${message}</div>`,
+							'   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+							'</div>'
+						].join('')
+
+						alertPlaceholder.append(wrapper)
+					}
+
+					const alertTrigger = document.getElementById('liveAlertBtn')
+					setTimeout(() => {
+						alert(`${resolve.productName} has been added to your cart.`, 'success')
+					}, 1000);
+					location.reload()
+
+				}else if(resolve.status == 'redirect'){
+					window.location.href = '/shoppingCart'
+				}
+				else {
+					window.location.href = "sign-in";
+				}
+			}
+		})
+
+	}
+
+
+</script>
+<script src="js/imgzoomer.js"></script>
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/product-simple.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:56 GMT -->
+
+</html>

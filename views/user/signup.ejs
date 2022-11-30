@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from harnishdesign.net/demo/html/oxyy/login-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 06:03:11 GMT -->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.png" rel="icon" />
+<title>Oxyy - Login and Register Form Html Template</title>
+<meta name="description" content="Login and Register Form Html Template">
+<meta name="author" content="harnishdesign.net">
+
+<!-- Web Fonts
+========================= -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+<!-- Stylesheet
+========================= -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="logincss/stylesheet.css" />
+
+</head>
+<body>
+
+  <%var err,alertPhone%>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End -->
+
+<div id="main-wrapper" class="oxyy-login-register">
+  <div class="hero-wrap d-flex align-items-center">
+    <div class="hero-mask opacity-4 bg-secondary"></div>
+    <div class="hero-bg hero-bg-scroll" style="background-image:url('images/login-bg-7.jpg');"></div>
+    <div class="hero-content w-100">
+      <div class="container">
+        <div class="row g-0 min-vh-100"> 
+          <!-- Welcome Text
+		  ========================= -->
+          <div class="col-md-6 d-flex flex-column">
+            <div class="row g-0 my-auto">
+              <div class="col-11 col-sm-10 col-lg-9 mx-auto text-center">
+                <div class="logo mt-5 mb-3"> <a href="index.html" title="Oxyy"><img src="/images/logo-1.png" alt="Oxyy"></a> </div>
+                <h1 class="text-5 fw-400 text-white mb-5">Looks like you're new here!</h1>
+                <h2 class="text-white line-height-3 mb-5">Sign up with your details to get started</h2>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Welcome Text End --> 
+          
+          <!-- Register Form
+		  ========================= -->
+          <div class="col-md-6 d-flex align-items-center py-5">
+            <div class="container my-auto py-4 shadow-lg bg-white">
+              <div class="row">
+                <div class="col-11 col-lg-10 mx-auto">
+                  <h3 class="text-9 fw-600 text-center my-3">Create an Account</h3>
+                  <p class="text-center mb-4">Already have an account? <a href="sign-in"><u>Sign In</u></a></p>
+                  <form id="registerForm" action="/sign-up" method="post">
+                    <div class="mb-3">
+                      <div class="row">
+                        <div class="col-6">
+                      <label class="form-label text-dark fw-600" for="emailAddress">Username</label>
+                      <input type="text" class="form-control rounded-0" name="username" id="emailAddress" placeholder="Enter Your Name" required>
+                      </div>
+                        <div class="col-6">
+                          <label class="form-label text-dark fw-600" for="emailAddress">Phone</label>
+                      <input type="text" class="form-control rounded-0" name="phone" id="emailAddress" placeholder="Enter Phone number" required>
+                        </div>
+                        <p class="text-danger"><%= alertPhone%></p>
+                    </div>
+                  </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="emailAddress">Email</label>
+                      <input type="email" class="form-control rounded-0" name="email" id="emailAddress" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                      <div class="row">
+                        <div class="col-6">
+                      <label class="form-label text-dark fw-600" for="loginPassword">Password</label>
+                      <input type="password" class="form-control rounded-0" name="password" id="loginPassword" placeholder="Enter password" required>
+                        </div>
+                        <div class="col-6">
+                          <label class="form-label text-dark fw-600" for="loginPassword">Confirm password</label>
+                          <input type="password" class="form-control rounded-0" name="confirmPassword" id="loginPassword" placeholder="Confirm password" required>
+                          </div>                                                                  
+                          <p class="text-danger"><%= err%></p>
+                      </div>
+                    </div>
+                    <div class="d-grid my-4">
+						<button class="btn btn-dark rounded-0" type="submit">Send OTP</button>
+					</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Register Form End --> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Script --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Style Switcher --> 
+<script src="loginjs/switcher.min.js"></script> 
+<script src="loginjs/theme.js"></script>
+</body>
+
+<!-- Mirrored from harnishdesign.net/demo/html/oxyy/login-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 06:03:15 GMT -->
+</html>

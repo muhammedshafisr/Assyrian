@@ -1,0 +1,488 @@
+    <!-- Add your site or application content here -->
+    <header>
+        <div class="header-container">
+            <!--header top start-->
+            <!-- <div class="container">
+                <div class="top-bar">
+                    <div class="topbar-content">
+                        <div class="header-email widget">
+                            <i class="fa fa-envelope"></i><strong>Email:</strong> <a
+                                href="mailto:admin@bootexperts.com ">admin@bootexperts.com </a>
+                        </div>
+                        <div class="header-phone widget"><i class="fa  fa-phone"></i><strong>Phone:</strong><a
+                                href="tel:+8801973833508">(+8801) 973833508</a> </div>
+                        <div id="lang_sel_list">
+                            <ul>
+                                <li class="icl-en">
+                                    <a class="lang_sel_sel" href="#">
+                                        <img title="English" alt="en" src="img/language/en.png" class="iclflag">&nbsp;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-menu widget">
+                            <div class="menu-top-menu-container">
+                                <ul class="nav_menu" id="menu-top-menu">
+                                    <li class="menu-item  first"><a href="my-account.html">My Account</a></li>
+                                    <li class="menu-item"><a href="wishlist.html">My Wishlist</a></li>
+                                    <li class="menu-item"><a href="shopping-cart.html">Shopping Cart</a></li>
+                                    <li class="menu-item"><a href="checkout.html">Checkout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!--header top end-->
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-lg-3">
+                            <div class="global-table">
+                                <div class="global-row">
+                                    <div class="global-cell">
+                                        <div class="logo">
+                                            <a href="index.html" title="Assyrian"><img src="img/logo/logo-1.png"
+                                                    alt="logo image"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-9 d-none d-lg-block">
+                            <div class="horizontal-menu">
+                                <div class="global-table">
+                                    <div class="global-row">
+                                        <div class="global-cell">
+                                            <div class="visible-large">
+                                                <div class="mega_main mega_main_menu" id="mega_main_menu_first">
+                                                    <div class="menu_holder">
+                                                        <div class="menu_inner">
+                                                            <nav>
+                                                                <ul class="mega_main_menu_ul"
+                                                                    id="mega_main_menu_ul_first">
+                                                                    <li class="menu-item active">
+                                                                        <a class="item_link" href="/home">
+                                                                            <span class="link_content">
+                                                                                <span class="link_text">Home</span>
+                                                                            </span>
+                                                                        </a>
+                                                                       
+                                                                        <!-- /.mega_dropdown -->
+                                                                    </li>
+                                                                    
+                                                                    <li class="menu-item">
+                                                                        <a class="item_link" href="#">
+                                                                            <span class="link_content">
+                                                                                <span class="link_text">About Us</span>
+                                                                            </span>
+                                                                        </a>
+                                                                       
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="item_link" href="#">
+                                                                            <span class="link_content">
+                                                                                <span class="link_text">Contact
+                                                                                    Us</span>
+                                                                            </span>
+                                                                        </a>
+                                                                        
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="item_link" href="wishlist">
+                                                                            <span class="link_content">
+                                                                                <span class="link_text bi bi-bag-heart">Wishlist</span>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="item_link" href="#">
+                                                                            <span class="link_content">
+                                                                                <span class="link_text bi bi-person">My Account</span>
+                                                                            </span>
+                                                                        </a>
+                                                                        <ul class="mega_dropdown">
+                                                                            <% var username, cart, coupons%>
+                                                                            <% if ( username ) {%>
+                                                                                <li class="menu-item">
+                                                                                    <a class="item_link" href="myAccount%>">
+                                                                                        <span class="link_content">
+                                                                                            <span class="link_text"><%= username.username%></span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item">
+                                                                                    <a class="item_link" href="getOrder">
+                                                                                        <span class="link_content">
+                                                                                            <span class="link_text">Orders</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item">
+                                                                                    <a class="item_link" href="getCoupon">
+                                                                                        <span class="link_content">
+                                                                                            <span class="link_text">Coupon</span>
+                                                                                            <span class="badge rounded-pill badge-notification text-success"></span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="menu-item">
+                                                                                    <a class="item_link" href="/logout">
+                                                                                        <span class="link_content">
+                                                                                            <span class="link_text">Logout</span>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </li>
+
+                                                                                <%}else{%>
+                                                                            <li class="menu-item">
+                                                                                <a class="item_link" href="/sign-in">
+                                                                                    <span class="link_content">
+                                                                                        <span class="link_text">Sign in</span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <%}%>
+                                                                            <!-- <li class="menu-item">
+                                                                                <a class="item_link" href="contact-us.html">
+                                                                                    <span class="link_content">
+                                                                                         <span class="link_text">Contact Us</span>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li> -->
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </nav>
+                                                        </div>
+                                                        <!-- /class="menu_inner" -->
+                                                    </div>
+                                                    <!-- /class="menu_holder" -->
+                                                </div>
+                                                <!-- /id="mega_main_menu" -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 d-lg-none">
+                            <!-- Main Menu End -->
+                            <div class='mobile-menu-area'>
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="index.html">Home</a>
+                                            
+                                        </li>
+                                        <li><a href="shop.html">Shop Pages</a>
+                                            <ul>
+                                                <li><a href="shop-full-width.html">Full Width</a></li>
+                                                <li><a href="shop-left-sidebar.html">Sidebar Left</a></li>
+                                                <li><a href="shop-right-sidebar.html">Sidebar Right</a></li>
+                                                <li><a href="shop-list-view.html">List View</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog.html">Blog Pages</a>
+                                            <ul>
+                                                <li><a href="blog-nosidebar.html">None Sidebar</a></li>
+                                                <li><a href="blog-left-sidebar.html">Sidebar Left</a></li>
+                                                <li><a href="blog-right-sidebar.html">Sidebar Right</a></li>
+                                                <li><a href="blog-full-width.html">Full Width</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="portfolio-detailas.html">Portfolio</a>
+                                            <ul>
+                                                <li><a href="portfolio-column-3.html">Three Columns</a></li>
+                                                <li><a href="portfolio-column-4.html">Four Columns</a></li>
+                                                <li><a href="portfolio-detailas.html">Single Columns</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Pages</a>
+                                            <ul>
+                                                <li><a href="about-us.h">About Us</a></li>
+                                                <li><a href="contact-us.html">Contact Us</a></li>
+                                                <li><a href="question-answers.html">Frequently Questions</a></li>
+                                                <li><a href="sample-page.html">Sample Page</a></li>
+                                                <li><a href="404.html">Error 404</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- Main Menu End -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ container -->
+                <div class="nav-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="left-category-menu d-lg-block d-none">
+                                    <div class="left-product-cat">
+                                        <div class="category-heading">
+                                            <h2>categories</h2>
+                                        </div>
+                                        <!-- CATEGORY-MENU-LIST START -->
+                                        <div class="category-menu-list" style="display: none;">
+                                            <ul>
+                                                <!--SINGLE MENU START-->
+                                                <%var categories%>
+                                                <%if(categories){%>
+                                                <%categories.forEach((x) => {%>
+                                                <li class="arrow-plus">
+                                                    <a href="category?name=<%=x.category%>"><span class="cat-thumb "></span><%= x.category%></a>
+                                                    <!--  MEGA MENU START -->
+                                                    <!-- <div class="cat-left-drop-menu">
+                                                        <div class="cat-left-drop-menu-left">
+                                                            <i class="fa fa-laptop"></i>
+                                                            <a class="menu-item-heading" href="#">Television</a>
+                                                            <ul>
+                                                                <li><a href="#">LCD TV</a></li>
+                                                                <li><a href="#">LED TV</a></li>
+                                                                <li><a href="#">Curved TV</a></li>
+                                                                <li><a href="#">Plasma TV</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="cat-left-drop-menu-left">
+                                                            <a class="menu-item-heading" href="#">Refrigerator</a>
+                                                            <ul>
+                                                                <li><a href="#">LG</a></li>
+                                                                <li><a href="#">Samsung</a></li>
+                                                                <li><a href="#">Toshiba</a></li>
+                                                                <li><a href="#">Panasonic</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="cat-left-drop-menu-left">
+                                                            <a class="menu-item-heading" href="#">Washing machine</a>
+                                                            <ul>
+                                                                <li><a href="#">Toshiba</a></li>
+                                                                <li><a href="#">Samsung</a></li>
+                                                                <li><a href="#">Sanyo</a></li>
+                                                                <li><a href="#">LG</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="cat-left-drop-menu-left">
+                                                            <a class="menu-item-heading" href="#">Air conditioners</a>
+                                                            <ul>
+                                                                <li><a href="#">Samsung</a></li>
+                                                                <li><a href="#">Panasonic</a></li>
+                                                                <li><a href="#">Sanaky</a></li>
+                                                                <li><a href="#">Toshiba</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div> -->
+                                                    <!--MEGA MENU END -->
+                                                </li>
+                                                <%})}else{%>
+                                                    <%}%>
+                                                <!--SINGLE MENU END-->
+                                                <!--SINGLE MENU START-->
+                                                <!-- <li class="arrow-plus"> -->
+                                                    <!-- <a href="#"><span class="cat-thumb"><i
+                                                                class="fa fa-shopping-bag"></i></span>Fashion &
+                                                        Beauty</a> -->
+                                                    <!-- MEGA MENU START -->
+                                                    <!-- <div
+                                                        class="cat-left-drop-menu drop-down-single cat-dropdown-single">
+                                                        <div class="cat-left-drop-menu-left cat-dropdown">
+                                                            <ul>
+                                                                <li><a href="#">Accessories</a></li>
+                                                                <li><a href="#">Bags</a></li>
+                                                                <li><a href="#">Clothings</a></li>
+                                                                <li><a href="#">Shoes</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div> -->
+                                                    <!--  MEGA MENU END -->
+                                                <!-- </li> -->
+                                                <!--SINGLE MENU END-->
+                                                <!--SINGLE MENU START-->
+                                                <!-- <li class="arrow-plus">
+                                                    <a href="#"><span class="cat-thumb"><i
+                                                                class="fa fa-mobile"></i></span>Smart Phone & Tablet</a> -->
+                                                    <!-- MEGA MENU START -->
+                                                    <!-- <div
+                                                        class="cat-left-drop-menu drop-down-single cat-dropdown-single">
+                                                        <div class="cat-left-drop-menu-left cat-dropdown">
+                                                            <ul>
+                                                                <li><a href="#">Apple</a></li>
+                                                                <li><a href="#">Samsung</a></li>
+                                                                <li><a href="#">LG</a></li>
+                                                                <li><a href="#">Sony</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div> -->
+                                                    <!--  MEGA MENU END -->
+                                                <!-- </li> -->
+                                                <!--SINGLE MENU END-->
+                                                <!--SINGLE MENU START-->
+                                                <!-- <li>
+                                                    <a href="#"><span class="cat-thumb "><i
+                                                                class="fa fa-futbol-o"></i></span>Sport & Outdoor</a>
+                                                </li> -->
+                                                <!--SINGLE MENU END-->
+                                                <!--SINGLE MENU START-->
+                                                <!-- <li><a href="#"><span class="cat-thumb"><i
+                                                                class="fa fa-car"></i></span>Automotive & Morocycle</a>
+                                                </li> -->
+                                                <!--SINGLE MENU END-->
+                                                <!--SINGLE MENU START-->
+                                                <!-- <li><a href="#"><span class="cat-thumb"><i
+                                                                class="fa fa-diamond"></i></span>Holiday Supplies &
+                                                        Gifts</a></li> -->
+                                                <!--SINGLE MENU END-->
+                                                <!--SINGLE MENU START-->
+                                                <!-- <li><a href="#"><span class="cat-thumb"><i
+                                                                class="fa fa-gift"></i></span>Toys & Hobbies</a></li> -->
+                                                <!--SINGLE MENU END-->
+
+                                                <!--MENU ACCORDION START-->
+                                                <!-- <li class=" rx-child">
+                                                    <a href="#">
+                                                        <span class="cat-thumb"><i class="fa fa-binoculars"></i></span>
+                                                        clothing
+                                                    </a>
+                                                </li> -->
+                                                <!-- <li class=" rx-parent">
+                                                    <a class="rx-default">
+                                                        <span class="cat-thumb  fa fa-plus"></span> More categories
+                                                    </a>
+                                                    <a class="rx-show">
+                                                        <span class="cat-thumb  fa fa-minus"></span> close menu
+                                                    </a>
+                                                </li> -->
+                                                <!--MENU ACCORDION END-->
+                                            </ul>
+                                        </div>
+                                        <!-- CATEGORY-MENU-LIST END -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="search-cart-list">
+                                    <div class="header-search">
+                                        <!-- <div class="cate-toggler">All Categories</div> -->
+                                        <!-- <div class="product-category">
+                                            <ul>
+                                                <li><a href="#">All Categories</a></li>
+                                                <li><a href="#">Accessories</a></li>
+                                                <li><a href="#">Bags</a></li>
+                                                <li><a href="#">Clothings</a>
+                                                    <ul class="children">
+                                                        <li><a href="#">Women</a>
+                                                            <ul class="children">
+                                                                <li><a href="#">Hat</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Men</a>
+                                                            <ul class="children">
+                                                                <li><a href="#">Hat</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Teen</a>
+                                                            <ul class="children">
+                                                                <li><a href="#">Hat</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Conditioners</a></li>
+                                                <li><a href="#">Fan</a></li>
+                                                <li><a href="#">Irons</a></li>
+                                                <li><a href="#">Kettle</a></li>
+                                                <li><a href="#">Knife</a></li>
+                                                <li><a href="#">Laptop &amp; PC</a>
+                                                    <ul class="children">
+                                                        <li><a href="#">IMac</a></li>
+                                                        <li><a href="#">Mac Mini</a></li>
+                                                        <li><a href="#">Mac Pro</a></li>
+                                                        <li><a href="#">Macbook Pro</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Phone &amp; Tablet</a>
+                                                    <ul class="children">
+                                                        <li><a href="#">Anroid Tablet</a></li>
+                                                        <li><a href="#">Ipad</a></li>
+                                                        <li><a href="#">Iphone</a></li>
+                                                        <li><a href="#">Nexus</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Shoes</a></li>
+                                                <li><a href="#">Television</a></li>
+                                            </ul>
+                                        </div> -->
+                                        <form action="searchItem" method="post">
+                                            <div>
+                                                <input type="text" name="text" placeholder="Search product...">
+                                                <button type="submit">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="cart-total">
+                                        <ul>
+                                            <li>
+                                                <a href="shoppingCart" class="cart-toggler">
+                                                    <span>My cart :
+                                                        <% if ( cart ) {%>
+                                                            <span id="cartCount"><%=cart.length %></span><span class="cart-no"><i class="fa fa-shopping-cart"></i> items</span>
+                                                        <%} else {%>
+                                                        <span id="cartCount">0</span><span class="cart-no"><i class="fa fa-shopping-cart"></i> items</span>
+                                                           
+                                                           <%}%>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="mini_cart_inner">
+                                            <ul class="cart_list">
+                                                <li>
+                                                    <a class="product-image" href="#">
+                                                        <img src="img/product/41.jpg" alt="cart-pro-img">
+                                                        <span class="quantity">1</span>
+                                                    </a>
+                                                    <div class="product-details">
+                                                        <a href="#" class="remove" title="Remove this item"><i
+                                                                class="fa fa-times-circle"></i></a>
+                                                        <a class="product-name" href="#">Aenean sagittis</a>
+                                                        <span class="cart-price-box">
+                                                            <span class="amount">£75.00</span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a class="product-image" href="#">
+                                                        <img src="img/product/44.jpg" alt="cart-pro-img">
+                                                        <span class="quantity">2</span>
+                                                    </a>
+                                                    <div class="product-details">
+                                                        <a href="#" class="remove" title="Remove this item"><i
+                                                                class="fa fa-times-circle"></i></a>
+                                                        <a class="product-name" href="#">Rafiq sagittis</a>
+                                                        <span class="cart-price-box">
+                                                            <span class="amount">£120.00</span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!-- end product list -->
+                                            <p class="total">Subtotal: <span class="amount">£315.00</span></p>
+                                            <p class="buttons">
+                                                <a href="#" class="button checkout wc-forward">Checkout</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--/ Header -->

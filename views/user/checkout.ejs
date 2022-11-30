@@ -1,0 +1,866 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:57 GMT -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>checkout page | Assyrian</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- favicon
+		============================================ -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+	<!-- Google Fonts
+		============================================ -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic,600' rel='stylesheet'
+		type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- font awesome CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- jquery-ui CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<!-- social-likes_classic CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/social-likes_classic.css">
+	<!-- venobox CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/venobox.css">
+	<!-- owl.carousel CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<!-- nivo slider CSS
+		============================================ -->
+	<link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+	<link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
+	<!-- animate CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- normalize CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- meanmenu CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/meanmenu.css">
+	<!-- main CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- style CSS
+		============================================ -->
+	<link rel="stylesheet" href="style.css">
+	<!-- responsive CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- modernizr JS
+		============================================ -->
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	
+</head>
+
+<body class="home">
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<!-- Add your site or application content here -->
+
+
+	<%- include('../partials/userNav.ejs')%>
+
+
+		<div class="clear"></div>
+		<!-- main-container full-width -->
+		<div class="my-account-area main-container">
+			<div class="entry-header">
+				<h1 class="entry-title">Checkout</h1>
+			</div>
+			<form id="checkout-form">
+			<div class="container">
+				<div class="row">
+					<!-- coupon-area start -->
+					<div class="coupon-area">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="coupon-accordion">
+										<!-- ACCORDION START -->
+
+										<!-- ACCORDION END -->
+										<!-- ACCORDION START -->
+										<h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span>
+										</h3>
+										<div id="checkout_coupon" class="coupon-checkout-content">
+											<div class="coupon-info">
+												<form id="coupon_form">
+													<p class="checkout-coupon">
+														<input type="text" id="couponCod" name="couponCod" placeholder="Coupon code" />
+														<input type="button" onclick="fire()" value="Apply Coupon" />
+														<p class="text-danger" id="couponIndicator" style="display: none;"></p>
+													</p>
+												</form>
+											</div>
+										</div>
+										<!-- ACCORDION END -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- coupon-area end -->
+					<!-- checkout-area start -->
+					<div class="checkout-area">
+						<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="checkbox-form-1">
+											<%var address%>
+											<%if(address[0].address){%>
+												<h3>Delivery Details</h3>
+												<input type="hidden" name="oldAddress" value="active">
+												<div>
+													<div class="col-12">
+														<%=address[0].address.username%>
+													</div>
+													<div class="col-12">
+														<%=address[0].address.city%>,
+															<%=address[0].address.district%>,
+																<%=address[0].address.state%>
+													</div>
+													<div class="col-12">
+														<%=address[0].address.pincode%>
+													</div>
+													<div class="col-12 text-primary">
+														<%=address[0].address.email%>
+													</div>
+													<a class="btn mt-4" href="addAddress">Change</a>
+												</div>
+											<%}else{%>
+												<h3>Billing Details</h3>
+												<p>
+													<label for="">Address - 1</label>
+													<input class="collapse-show" data-bs-toggle="collapse"
+														href="#collapseExample" role="button" aria-expanded="false"
+														aria-controls="collapseExample" id="ship-box-1" type="radio"
+														name="address" checked />
+	
+												</p>
+												<div class="collapse-show" id="collapseExample">
+													<div class="card card-body">
+														<!-- <form id="address_1"> -->
+														<div class="row">
+															<div class="col-md-6">
+																<div class="checkout-form-list">
+																	<input type="text" id="username" name="name"
+																		placeholder="Name" required/>
+																	<p id="reqname" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="checkout-form-list">
+																	<input type="text" id="phone" name="phone"
+																		placeholder="Mobile Number" required/>
+																	<p id="reqphone" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<div class="col-md-12">
+																<div class="checkout-form-list">
+																	<input type="text" id="locality" name="locality"
+																		placeholder="Area and Street" required/>
+																	<p id="reqlocality" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<input type="hidden" name="userId" value="<%= username._id%>">
+															<div class="col-md-12">
+																<div class="checkout-form-list">
+																	<input type="text" id="district" name="district"
+																		placeholder="District" required/>
+																	<p id="reqdistrict" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<div class="col-md-12">
+																<div class="checkout-form-list">
+																	<input type="text" id="city" name="city"
+																		placeholder="Town / City" required/>
+																	<p id="reqcity" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="checkout-form-list">
+																	<input type="text" id="state" name="state"
+																		placeholder="State / County" required/>
+																	<p id="reqstate" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="checkout-form-list">
+																	<input type="text" id="pin" name="pin"
+																		placeholder="Postcode" required/>
+																	<p id="reqpin" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<div class="col-md-12">
+																<div class="checkout-form-list">
+																	<input type="email" id="email" name="email"
+																		placeholder="Email Address" required/>
+																	<p id="reqemail" class="text-danger"
+																		style="display:none;">This field is required !</p>
+																</div>
+															</div>
+															<!-- <button >
+																Save
+															</button> -->
+														</div>
+													</div>
+												</div>
+
+
+
+
+
+
+											<%}%>
+
+
+											<!-- <p>
+												<label for="">Address - 2</label>
+												<input class="collapse show" data-bs-toggle="collapse"
+													href="#collapseExample1" role="button" aria-expanded="false"
+													aria-controls="collapseExample" id="ship-box-1" type="radio"
+													name="address" />
+
+											</p>
+											<div class="collapse" id="collapseExample1">
+												<div class="card card-body">
+													<div class="row">
+														<div class="col-md-6">
+															<div class="checkout-form-list">
+																<input type="text" name="name" placeholder="Name" />
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="checkout-form-list">
+																<input type="text" name="phone"
+																	placeholder="Mobile Number" />
+															</div>
+														</div>
+														<div class="col-md-12">
+															<div class="checkout-form-list">
+																<input type="text" name="locality"
+																	placeholder="Area and Street" />
+															</div>
+														</div>
+														<div class="col-md-12">
+															<div class="checkout-form-list">
+																<input type="text" name="district"
+																	placeholder="District" />
+															</div>
+														</div>
+														<div class="col-md-12">
+															<div class="checkout-form-list">
+																<input type="text" name="city"
+																	placeholder="Town / City" />
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="checkout-form-list">
+																<input type="text" name="state"
+																	placeholder="State / County" />
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="checkout-form-list">
+																<input type="text" name="pin" placeholder="Postcode" />
+															</div>
+														</div>
+														<div class="col-md-12">
+															<div class="checkout-form-list">
+																<input type="email" name="email"
+																	placeholder="Email Address" />
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div> -->
+
+											<div id="ship-box-info">
+
+												<div class="different-address">
+													<div class="ship-different-title">
+														<h3>
+															<label>Ship to a different address?</label>
+															<input id="ship-box" type="checkbox" name="address" />
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="your-order">
+											<h3>Your order</h3>
+											<div class="your-order-table table-responsive">
+												<table>
+													<thead>
+														<tr>
+															<th class="product-name">Product</th>
+															<th class="product-total">Total</th>
+														</tr>
+													</thead>
+													<tbody>
+														<%cartProducts.forEach((x)=> {%>
+															<tr class="cart_item">
+																<input type="hidden" name="products"
+																	value="<%= x.products._id%>">
+																<td class="product-name">
+																	<%= x.products.productName%>
+																		<strong class="product-quantity"> ×
+																			<%= x.quantity%>
+																		</strong>
+																</td>
+																<td class="product-total">
+																	<span class="amount">₹<%=x.quantity *
+																			x.products.price%></span>
+																</td>
+															</tr>
+															<%})%>
+													</tbody>
+													<tfoot>
+														<tr class="cart-subtotal">
+															<th>Cart Subtotal</th>
+															<td><span class="amount">₹
+																	<%= totalAmount.total%>
+																</span></td>
+														</tr>
+														<tr class="shipping">
+															<th>Shipping</th>
+															<td>
+																<ul>
+																	<li>
+																		Free Shipping
+																	</li>
+
+																</ul>
+															</td>
+														</tr>
+														<tr id="applyText" style="display: none;">
+															<th style="border-bottom: none;">Coupon applied<i class="bi bi-check2 text-success"></i></th>
+														</tr>
+														<tr class="order-total">
+															<th>Order Total</th>
+															<td><strong>₹<span id="totalAmount" class="amount"><%= totalAmount.total%></span></strong>
+																<input type="hidden" id="ds_amount" value="0" name="ds_amount">
+															</td>
+														</tr>
+														
+													</tfoot>
+												</table>
+
+
+											</div>
+											<div class="payment-method">
+												<div class="payment-accordion">
+													<!-- ACCORDION START -->
+													<!-- <h3>Direct Bank Transfer</h3>
+													<div class="payment-content">
+														<p>Make your payment directly into our bank account. Please use
+															your Order ID as the payment reference. Your order won’t be
+															shipped until the funds have cleared in our account.</p>
+													</div> -->
+													<!-- ACCORDION END -->
+													<!-- ACCORDION START -->
+													<h3>COD</h3>
+													<div class="payment-content">
+														<label for="">Cash on Delivery</label>
+														<input type="radio" id="cod" name="method" value="COD">
+													</div>
+													<!-- ACCORDION END -->
+													<!-- ACCORDION START -->
+													<h3>Razorpay</h3>
+													<div class="payment-content">
+														<label for="">Online Payment</label>
+														<input type="radio" id="online" name="method" value="online">
+														<!-- <img src="img/pay/payment.png" alt="" /> -->
+													</div>
+													<p id="reqpayment" style="display: none;" class="text-danger">Please
+														choose any payment method/p>
+														<!-- ACCORDION END -->
+												</div>
+												<div class="order-button-payment">
+													<input type="submit" value="Place order" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+						</div>
+					</div>
+					<!-- checkout-area end -->
+				</div>
+			</div>
+		</form>
+		</div>
+		<!-- main-container full-width end -->
+
+		<!-- Footer area-->
+		<div class="footer">
+			<!-- Footer top start-->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7 col-sm-12 col-xs-12">
+							<div class="footer-top-left">
+								<h2 class="widget-title">Newsletter</h2>
+								<div class="subscribe-form-area">
+									<form action="#" method="post" class="subscribe-form">
+										<input type="text" placeholder="Enter your email..." title="Enter your email..."
+											name="text-field" id="text-field" />
+										<input type="submit" value="Subscribe" />
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5 col-sm-12 col-xs-12">
+							<div class="footer-top-right">
+								<div class="social-icon-area">
+									<h2 class="widget-title">Follow Us</h2>
+									<ul class="social-icons">
+										<li>
+											<a href="#" data-placement="top" data-bs-toggle="tooltip"
+												data-original-title="Facebook" class="facebook social-icon"
+												target="_blank">
+												<i class="fa fa-facebook"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-placement="top" data-bs-toggle="tooltip"
+												data-original-title="Twitter" class="twitter social-icon"
+												target="_blank">
+												<i class="fa fa-twitter"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-placement="top" data-bs-toggle="tooltip"
+												data-original-title="Tumblr" class="tumblr social-icon" target="_blank">
+												<i class="fa fa-tumblr"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-placement="top" data-bs-toggle="tooltip"
+												data-original-title="Google-plus" class="google-plus social-icon"
+												target="_blank">
+												<i class="fa fa-google-plus"></i>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-placement="top" data-bs-toggle="tooltip"
+												data-original-title="Dribbble" class="dribbble social-icon"
+												target="_blank">
+												<i class="fa fa-dribbble"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer top end-->
+			<!-- Footer middle start-->
+			<div class="footer-middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div class="footer-middle-menu">
+								<h3 class="widget-title">Our services</h3>
+								<div class="menu-our-services-container">
+									<ul class="nav_menu">
+										<li class="menu-item">
+											<a href="#">Shipping &amp; Returns</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Secure Shopping</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">International Shipping</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Affiliates</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Contact</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="footer-middle-menu">
+								<h3 class="widget-title">My Account</h3>
+								<div class="menu-my-account-container">
+									<ul class="nav_menu">
+										<li class="menu-item">
+											<a href="#">My Account</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Shopping cart</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Wishlist</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Custom Link</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Help</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="footer-middle-menu">
+								<h3 class="widget-title">Infomation</h3>
+								<div class="menu-infomation-container">
+									<ul class="nav_menu">
+										<li class="menu-item">
+											<a href="#">Our Blog</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">About Our Shop</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Secure Shopping</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Privacy Policy</a>
+										</li>
+										<li class="menu-item">
+											<a href="#">Delivery infomation</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="footer-middle-menu">
+								<h3 class="widget-title">Contact Us</h3>
+								<div class="menu-contact-us-container">
+									<ul>
+										<li>
+											<i class="fa fa-map-marker"> </i>
+											Addresss: 123 Pall Mall, London England
+										</li>
+										<li>
+											<i class="fa fa-envelope"> </i>
+											Email: admin@bootexperts.com
+										</li>
+										<li>
+											<i class="fa fa-phone"> </i>
+											Phone: (+8801) 922262289
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer middle end-->
+			<!-- Footer bottom start-->
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7 col-sm-12 col-xs-12 fix">
+							<div class="bottom_menu">
+								<div class="menu-customer-care-container">
+									<nav>
+										<ul class="nav_menu">
+											<li class="menu-item">
+												<a href="contact-us.html">Contact us</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Sitemap</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Term &amp; Conditions</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Gift Vouchers</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">BestSellers</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="copyright-info">
+								Copyright &copy; 2021
+								<a href="https://hasthemes.com/">HasThemes.</a>
+								All Rights Reserved
+							</div>
+						</div>
+						<div class="col-lg-5 col-sm-12 col-xs-12">
+							<div class="bottom-right">
+								<a href="#"><img src="img/pay/pay-visa.png" alt="pay-visa" /></a>
+								<a href="#"><img src="img/pay/pay-maestro.png" alt="pay-maestro" /></a>
+								<a href="#"><img src="img/pay/pay-discover.png" alt="pay-discover" /></a>
+								<a href="#"><img src="img/pay/pay-cirrus.png" alt="pay-cirrus" /></a>
+								<a href="#"><img src="img/pay/pay-bank.png" alt="pay-bank" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer bottom end-->
+		</div>
+		<!-- Footer area-->
+
+		<!-- jquery
+		============================================ -->
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+		<!-- bootstrap JS
+		============================================ -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- wow JS
+		============================================ -->
+		<script src="js/wow.min.js"></script>
+		<!-- venobox JS
+		============================================ -->
+		<script src="js/venobox.js"></script>
+
+		<!-- jquery collapse JS
+		============================================ -->
+		<script src="js/jquery.collapse.js"></script>
+		<!-- price-slider JS
+		============================================ -->
+		<script src="js/jquery-price-slider.js"></script>
+		<!-- meanmenu JS
+		============================================ -->
+		<script src="js/jquery.meanmenu.js"></script>
+		<!-- owl.carousel JS
+		============================================ -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- mixitup JS
+		============================================ -->
+		<script src="js/jquery.mixitup.js"></script>
+		<!-- scrollUp JS
+		============================================ -->
+		<script src="js/jquery.scrollUp.min.js"></script>
+		<!-- Nivo slider js
+		============================================ -->
+		<script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+		<script src="lib/home.js" type="text/javascript"></script>
+		<!-- plugins JS
+		============================================ -->
+		<script src="js/plugins.js"></script>
+		<!-- main JS
+		============================================ -->
+		<script src="js/main.js"></script>
+		
+</body>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+
+	function fire () {
+	console.log('hello')
+	event.preventDefault()
+	const couponCod = document.getElementById('couponCod').value
+	const couponIndicator = document.getElementById('couponIndicator')
+	const totalAmount = document.getElementById('totalAmount').innerHTML
+	const applyText = document.getElementById('applyText')
+	couponIndicator.style.display = 'none'
+	applyText.style.display = 'none'
+
+	if (couponCod.length >= 12 ){
+	$.ajax({
+		url : 'applyCoupon',
+		data : {
+			couponCod,
+			totalAmount
+		},
+		method : 'post',
+		success : (response) => {
+			if (response.status == 'cantApply'){
+				couponIndicator.style.display = 'block'
+				couponIndicator.innerHTML = 'Total amount required '+ response.requiredAmount
+			}
+			else if (response.status == 'success'){
+				document.getElementById('ds_amount').value = response.amount
+				const applyText = document.getElementById('applyText').style.display = 'block'
+				document.getElementById('totalAmount').innerHTML = response.total
+			}
+			else {
+				couponIndicator.style.display = 'block'
+				couponIndicator.innerHTML = 'Please enter a valid coupon cod !'
+			}
+		}
+	})
+	}else{
+		couponIndicator.style.display = 'block'
+		couponIndicator.innerHTML = 'Please enter a valid coupon cod !'
+	}
+}
+
+
+
+	$('#checkout-form').submit((e) => {
+		e.preventDefault()
+		// const username = document.getElementById('username').value
+		// const phone = document.getElementById('phone').value
+		// const locality = document.getElementById('locality').value
+		// const district = document.getElementById('district').value
+		// const city = document.getElementById('city').value
+		// const state = document.getElementById('state').value
+		// const pin = document.getElementById('pin').value
+		// const email = document.getElementById('email').value
+		// const cod = document.getElementById('cod').value
+		// const online = document.getElementById('online').value
+		// const reqname = document.getElementById('reqname')
+		// const reqphone = document.getElementById('reqphone')
+		// const reqlocality = document.getElementById('reqlocality')
+		// const reqdistrict = document.getElementById('reqdistrict')
+		// const reqcity = document.getElementById('reqcity')
+		// const reqstate = document.getElementById('reqstate')
+		// const reqpin = document.getElementById('reqpin')
+		// const reqemail = document.getElementById('reqemail')
+		// const reqpayment = document.getElementById('reqpayment')
+		// reqname.style.display = 'none'
+		// reqlocality.style.display = 'none'
+		// reqphone.style.display = 'none'
+		// reqstate.style.display = 'none'
+		// reqcity.style.display = 'none'
+		// reqdistrict.style.display = 'none'
+		// reqpin.style.display = 'none'
+		// reqemail.style.display = 'none'
+		// reqpayment.style.display = 'none'
+		// if (username == '') {
+		// 	reqname.style.display = 'block'
+		// }
+		// else if (phone == '') {
+		// 	reqphone.style.display = 'block'
+		// }
+		// else if (locality == '') {
+		// 	reqlocality.style.display = 'block'
+		// }
+		// else if (district == '') {
+		// 	reqdistrict.style.display = 'block'
+		// }
+		// else if (city == '') {
+		// 	reqcity.style.display = 'block'
+		// }
+		// else if (state == '') {
+		// 	reqstate.style.display = 'block'
+		// }
+		// else if (pin == '') {
+		// 	reqpin.style.display = 'block'
+		// }
+		// else if (email == '') {
+		// 	reqemail.style.display = 'block'
+		// }
+		// else if (cod.checked && online == '') {
+		// 	reqpayment.style.display = 'block'
+		// }
+		// else {
+			$.ajax({
+				url: 'placeOrder',
+				method: 'post',
+				data: $('#checkout-form').serialize(),
+
+				success: (response) => {
+					if (response.status == 'orderPlaced') {
+						const orderId = response.orderId
+						console.log(orderId)
+						window.location = href = 'orderplaced?id=' + orderId
+					}
+					else {
+						console.log('hey')
+						razorpayPayment(response)
+					}
+				}
+			})
+		// }
+	})
+
+
+	function razorpayPayment(order) {
+		console.log(order)
+		var options = {
+			"key": "rzp_test_99ev8foDTy64Tk", // Enter the Key ID generated from the Dashboard
+			"amount": order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+			"currency": "INR",
+			"name": "ASSYRIAN",
+			"description": "Test Transaction",
+			"image": "https://example.com/your_logo",
+			"order_id": order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+			"handler": function (response) {
+				verifyPayment(response, order)
+			},
+			"prefill": {
+				"name": "Gaurav Kumar",
+				"email": "gaurav.kumar@example.com",
+				"contact": "9999999999"
+			},
+			"notes": {
+				"address": "Razorpay Corporate Office"
+			},
+			"theme": {
+				"color": "#3399cc"
+			}
+		};
+
+	var rzp1 = new window.Razorpay(options)
+	rzp1.open()
+	}
+
+
+	function verifyPayment(payment, order) {
+		console.log('lst')
+		$.ajax({
+			url : 'verifyPayment',
+			data : {
+				payment,
+				order
+			},
+			method : 'post',
+			success : (resolve) => {
+				console.log(resolve)
+				if (resolve.status == 'success'){
+					console.log('hello')
+						const orderId = resolve.orderId
+						console.log(orderId)
+						window.location = href = 'orderplaced?id=' + orderId
+				}
+				else{
+					console.log('payment failed')
+				}
+			}
+		})
+	}
+
+</script>
+
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:58 GMT -->
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="adminstyle/css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="adminstyle/css/admin.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+      crossorigin="anonymous"></script>
+<!-- 
+      <style>
+        div.preview-images > img {
+          width: 20%;
+          height: 10%;
+        }
+      </style> -->
+
+</head>
+<body>
+
+    <header>
+        <!-- Sidebar -->
+        <%- include('../partials/adminNav.ejs')%>
+        <!--Main layout-->
+  <main style="margin-top: 58px">
+    <div class="container pt-4">
+      <!-- Section: Main chart -->
+      <section class="mb-4">
+        <div class="card">
+          <div class="card-header d-flex py-3 justify-content-between align-items-center">
+            <h5 class="mb-0 text-center"><strong>Add Products</strong></h5>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Main chart -->
+    
+    <!-- Section: Main chart -->
+
+      <!--Section: Sales Performance KPIs-->
+      <section class="mb-4">
+        <div class="container w-50 my-3">
+            <form action="addProducts" method="post">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col-6">
+                    <div class="form-outline">
+                      <input type="text" id="form6Example2" name="productname" class="form-control" />
+                      <label class="form-label" for="form6Example2">Product name</label>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-outline">
+                      <select type="text" id="" name="category" class="form-control">
+                        <%resolve.forEach((x) => {%>
+                        <option class="non"><%=x.category%></option>
+                        <%})%>
+                      </select>
+                      <input type="hidden"/>
+                      <label class="form-label" ></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row mb-4">
+                    <div class="col-6">
+                      <div class="form-outline">
+                        <input type="text" id="form6Example2" name="sleeve" class="form-control" />
+                        <label class="form-label" for="form6Example2">Sleeve</label>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-outline">
+                        <input type="text" id="form6Example2" name="fabric" class="form-control" />
+                        <label class="form-label" for="form6Example2">Fabric</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-6">
+                      <div class="form-outline">
+                        <input type="text" id="form6Example2" name="ideal" class="form-control" />
+                        <label class="form-label" for="form6Example2">Ideal for</label>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-outline">
+                        <input type="text" id="form6Example2" name="size" class="form-control" />
+                        <label class="form-label" for="form6Example2">Size</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-6">
+                      <div class="form-outline">
+                        <input type="text" id="form6Example2" name="price" class="form-control" />
+                        <label class="form-label" for="form6Example2">Price</label>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-outline">
+                        <input type="text" id="form6Example2" name="packof" class="form-control" />
+                        <label class="form-label" for="form6Example2">Pack of</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                <!-- image input -->
+                <!-- <label class="form-label" for="customFile">image</label> -->
+                <input type="file" class="form-control mb-3" name="imageOne" multiple id="input-images" />
+                <input type="file" class="form-control" name="imageTwo" multiple id="input-images" />
+                <!-- Message input -->
+                <div class="form-outline mt-4 mb-4">
+                  <textarea class="form-control" id="form6Example7" name="description" rows="1"></textarea>
+                  <label class="form-label" for="form6Example7">Description</label>
+                </div>
+         
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Add product</button>
+              </form>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="preview-images"></div>
+              </div>
+            </div>
+
+      </section>
+      <!--Section: Sales Performance KPIs-->
+    </div>
+  </main>
+
+</body>
+
+      <!-- MDB -->
+  <script type="text/javascript" src="adminstyle/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="adminstyle/js/admin.js"></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      let imagesPreview = function(input, placeToInsertImagePreview) {
+        if (input.files) {
+          let filesAmount = input.files.length;
+          for (i = 0; i < filesAmount; i++) {
+            let reader = new FileReader();
+            reader.onload = function(event) {
+              $($.parseHTML("<img>"))
+                .attr("src", event.target.result)
+                .appendTo(placeToInsertImagePreview);
+            };
+            reader.readAsDataURL(input.files[i]);
+          }
+        }
+      };
+      $("#input-images").on("change", function() {
+        imagesPreview(this, "div.preview-images");
+      });
+    });
+  </script> -->
+
+</html>

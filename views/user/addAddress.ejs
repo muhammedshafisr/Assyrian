@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/my-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:58 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>My Account | Assyrian</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon
+        		============================================ -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+  <!-- Google Fonts
+        		============================================ -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic,600' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- font awesome CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- jquery-ui CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <!-- social-likes_classic CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/social-likes_classic.css">
+  <!-- venobox CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/venobox.css">
+  <!-- owl.carousel CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl.theme.css">
+  <link rel="stylesheet" href="css/owl.transitions.css">
+  <!-- nivo slider CSS
+        		============================================ -->
+  <link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+  <link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
+  <!-- animate CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- normalize CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- meanmenu CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/meanmenu.css">
+  <!-- main CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- style CSS
+        		============================================ -->
+  <link rel="stylesheet" href="style.css">
+  <!-- responsive CSS
+        		============================================ -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- modernizr JS
+        		============================================ -->
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body class="home">
+  <%var username%>
+    <%- include('../partials/userNav.ejs')%>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6 mt-3">
+            <div class="collapse-show" id="collapseExample">
+              <p class="text-success" id="success" style="display: none;"></p>
+              <div class="card card-body">
+                <form id="form_submit">
+                  <%if (address[0].address){%>
+                    <div class="row justify-content-center">
+                      <div class="col-md-6">
+                        <div class="checkout-form-list">
+                          <input type="text" id="username" name="name" value="<%=address[0].address.username%>"
+                            placeholder="Name" />
+                          <p id="reqname" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="checkout-form-list">
+                          <input type="text" id="phone" name="phone" value="<%=address[0].address.phone%>" placeholder="Mobile Number" />
+                          <p id="reqphone" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="checkout-form-list">
+                          <input type="text" id="locality" name="locality" value="<%=address[0].address.locality%>" placeholder="Area and Street" />
+                          <p id="reqlocality" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="checkout-form-list">
+                          <input type="text" id="district" name="district" value="<%=address[0].address.district%>" placeholder="District" />
+                          <p id="reqdistrict" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="checkout-form-list">
+                          <input type="text" id="city" name="city" value="<%=address[0].address.city%>" placeholder="Town / City" />
+                          <p id="reqcity" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="checkout-form-list">
+                          <input type="text" id="state" name="state" value="<%=address[0].address.state%>" placeholder="State / County" />
+                          <p id="reqstate" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="checkout-form-list">
+                          <input type="text" id="pin" name="pin" value="<%=address[0].address.pincode%>" placeholder="Postcode" />
+                          <p id="reqpin" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="checkout-form-list">
+                          <input type="email" id="email" name="email" value="<%=address[0].address.email%>" placeholder="Email Address" />
+                          <p id="reqemail" class="text-danger" style="display:none;">This field is required !</p>
+                        </div>
+                      </div>
+                      <button class="btn" style="max-width:20%;">
+                        Update
+                      </button>
+                    </div>
+                    <%}else{%>
+                      <div class="row justify-content-center">
+                        <div class="col-md-6">
+                          <div class="checkout-form-list">
+                            <input type="text" id="username" name="name" placeholder="Name" />
+                            <p id="reqname" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="checkout-form-list">
+                            <input type="text" id="phone" name="phone" placeholder="Mobile Number" />
+                            <p id="reqphone" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="checkout-form-list">
+                            <input type="text" id="locality" name="locality" placeholder="Area and Street" />
+                            <p id="reqlocality" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <div class="checkout-form-list">
+                            <input type="text" id="district" name="district" placeholder="District" />
+                            <p id="reqdistrict" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="checkout-form-list">
+                            <input type="text" id="city" name="city" placeholder="Town / City" />
+                            <p id="reqcity" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="checkout-form-list">
+                            <input type="text" id="state" name="state" placeholder="State / County" />
+                            <p id="reqstate" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="checkout-form-list">
+                            <input type="text" id="pin" name="pin" placeholder="Postcode" />
+                            <p id="reqpin" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="checkout-form-list">
+                            <input type="email" id="email" name="email" placeholder="Email Address" />
+                            <p id="reqemail" class="text-danger" style="display:none;">This field is required !</p>
+                          </div>
+                        </div>
+                        <button class="btn" style="max-width:20%;">
+                          Save
+                        </button>
+                      </div>
+                      <%}%>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- jquery
+        		============================================ -->
+      <script src="js/vendor/jquery-1.12.4.min.js"></script>
+      <!-- bootstrap JS
+        		============================================ -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow JS
+        		============================================ -->
+      <script src="js/wow.min.js"></script>
+      <!-- price-slider JS
+        		============================================ -->
+      <script src="js/jquery-price-slider.js"></script>
+      <!-- collapse JS
+        		============================================ -->
+      <script src="js/jquery.collapse.js"></script>
+      <!-- mixitup JS
+        		============================================ -->
+      <script src="js/jquery.mixitup.js"></script>
+      <!-- meanmenu JS
+        		============================================ -->
+      <script src="js/jquery.meanmenu.js"></script>
+      <!-- owl.carousel JS
+        		============================================ -->
+      <script src="js/owl.carousel.min.js"></script>
+      <!-- scrollUp JS
+        		============================================ -->
+      <script src="js/jquery.scrollUp.min.js"></script>
+      <!-- social-likes JS
+        		============================================ -->
+      <script src="js/social-likes.min.js"></script>
+      <!-- venobox JS
+        		============================================ -->
+      <script src="js/venobox.js"></script>
+      <!-- Nivo slider js
+        		============================================ -->
+      <script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+      <script src="lib/home.js" type="text/javascript"></script>
+      <!-- plugins JS
+        		============================================ -->
+      <script src="js/plugins.js"></script>
+      <!-- main JS
+        		============================================ -->
+      <script src="js/main.js"></script>
+
+</body>
+
+
+
+<!-- MDB -->
+<script type="text/javascript" src="adminstyle/js/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript" src="adminstyle/js/admin.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+
+</html>
+</body>
+<script>
+
+  $("#form_submit").submit((e) => {
+    e.preventDefault();
+    const username = document.getElementById('username').value
+    const phone = document.getElementById('phone').value
+    const locality = document.getElementById('locality').value
+    const district = document.getElementById('district').value
+    const city = document.getElementById('city').value
+    const state = document.getElementById('state').value
+    const pincode = document.getElementById('pin').value
+    const email = document.getElementById('email').value
+    const reqname = document.getElementById('reqname')
+    const reqphone = document.getElementById('reqphone')
+    const reqlocality = document.getElementById('reqlocality')
+    const reqdistrict = document.getElementById('reqdistrict')
+    const reqcity = document.getElementById('reqcity')
+    const reqstate = document.getElementById('reqstate')
+    const reqpin = document.getElementById('reqpin')
+    const reqemail = document.getElementById('reqemail')
+    const reqpayment = document.getElementById('reqpayment')
+    reqname.style.display = 'none'
+    reqlocality.style.display = 'none'
+    reqphone.style.display = 'none'
+    reqstate.style.display = 'none'
+    reqcity.style.display = 'none'
+    reqdistrict.style.display = 'none'
+    reqpin.style.display = 'none'
+    reqemail.style.display = 'none'
+
+    if (username == '') {
+      reqname.style.display = 'block'
+    }
+    else if (phone == '') {
+      reqphone.style.display = 'block'
+    }
+    else if (locality == '') {
+      reqlocality.style.display = 'block'
+    }
+    else if (district == '') {
+      reqdistrict.style.display = 'block'
+    }
+    else if (city == '') {
+      reqcity.style.display = 'block'
+    }
+    else if (state == '') {
+      reqstate.style.display = 'block'
+    }
+    else if (pincode == '') {
+      reqpin.style.display = 'block'
+    }
+    else if (email == '') {
+      reqemail.style.display = 'block'
+    }
+    else {
+      $.ajax({
+        url: 'saveAddress',
+        data: {
+          username,
+          phone,
+          locality,
+          district,
+          city,
+          state,
+          pincode,
+          email
+        },
+        method: 'post',
+
+        success: (response) => {
+          console.log(response)
+          if (response.status) {
+            const indicator = document.getElementById('success')
+            indicator.style.display = 'block'
+            indicator.innerHTML = 'Successfully updated'
+            setTimeout(() => {
+              window.location.href = 'myAccount'
+            },2000)
+          }
+          else {
+            const indicator = document.getElementById('success')
+            indicator.style.display = 'block'
+            indicator.innerHTML = 'Failed'
+          }
+        }
+      })
+    }
+  });
+
+</script>
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/my-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:58 GMT -->
+
+</html>

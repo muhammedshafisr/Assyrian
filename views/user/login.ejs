@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from harnishdesign.net/demo/html/oxyy/login-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 06:03:11 GMT -->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.png" rel="icon" />
+<title>Oxyy - Login and Register Form Html Template</title>
+<meta name="description" content="Login and Register Form Html Template">
+<meta name="author" content="harnishdesign.net">
+
+<!-- Web Fonts
+========================= -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+<!-- Stylesheet
+========================= -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="logincss/stylesheet.css" />
+
+</head>
+<body>
+
+<% var mssgOne,mssgTwo%>
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End -->
+
+<div id="main-wrapper" class="oxyy-login-register">
+  <div class="hero-wrap d-flex align-items-center">
+    <div class="hero-mask opacity-4 bg-secondary"></div>
+    <div class="hero-bg hero-bg-scroll" style="background-image:url('images/login-bg-7.jpg');"></div>
+    <div class="hero-content w-100">
+      <div class="container">
+        <div class="row g-0 min-vh-100"> 
+          <!-- Welcome Text
+		  ========================= -->
+          <div class="col-md-6 d-flex flex-column">
+            <div class="row g-0 my-auto">
+              <div class="col-11 col-sm-10 col-lg-9 mx-auto text-center">
+                <div class="logo mt-5 mb-3"> <a href="index.html" title="Oxyy"><img src="/images/logo-1.png" alt="Oxyy"></a> </div>
+                <h1 class="text-5 fw-400 text-white mb-5">We are glad to see you again! Get access to your Orders, Wishlist and Recommendations</h1>
+                <a class="btn text-5 fw-400 text-white mb-5" href="/home">Back to HOME</a>
+              </div>
+            </div>
+          </div>
+          <!-- Welcome Text End --> 
+          
+          <!-- Login Form
+		  ========================= -->
+          <div class="col-md-6 d-flex align-items-center py-5">
+            <div class="container my-auto py-4 shadow-lg bg-white">
+              <div class="row">
+                <div class="col-11 col-lg-10 mx-auto">
+                  <h3 class="text-9 fw-600 text-center my-3">Login</h3>
+                  <p class="text-center mb-4">New to ASSYRIAN? <a href="sign-up"><u>Create an Account</u></a></p>
+                  <form id="loginForm" action="sign-in" method="post">
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="emailAddress">Email / Mobile Number</label>
+                      <input type="text" class="form-control rounded-0" id="emailAddress" name="userEmail" placeholder="Enter Your Email">
+                    </div>
+                    <p class="text-danger" id="mssgOne" style="display: none;">Please enter valid Email ID/Mobile number</p>
+                    <p class="text-danger"><%= mssgOne%></p>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="loginPassword">Password</label>
+                      <input type="password" class="form-control rounded-0" id="loginPassword" name="userPassword" placeholder="Enter Password">
+                    </div>
+                    <p class="text-danger" id="mssgTwo" style="display: none;">Please enter password</p>
+                    <p class="text-danger"><%= mssgTwo%></p>
+                    
+                    <div class="d-grid my-4">
+						<button class="btn btn-dark rounded-0" id="submit" type="submit">Login</button>
+					</div>
+                  </form>
+
+                  <div class="d-flex justify-content-center text-muted">OR</div>
+                        
+                  <div class="row mt-4">
+                    <div class="col">
+                      <div class="form-check d-flex justify-content-center">
+                        <form action="sendotp" method="post">
+                          <input id="inp" name="email" type="hidden">
+                          <button class="btn text-5 fw-400 text-white text-primary" style="font-size: 1rem !important;" id="requestOTP">Request OTP</button>
+                        </form>
+                        </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Login Form End --> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Script --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Style Switcher --> 
+<script src="loginjs/switcher.min.js"></script> 
+<script src="loginjs/theme.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity=
+        "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous">
+    </script>
+<script>
+  
+  document.getElementById('submit').addEventListener('click',(event) => {
+  const email = document.getElementById( 'emailAddress' ).value;
+  const password = document.getElementById( 'loginPassword' ).value;
+  const mssgOne = document.getElementById( 'mssgOne' );
+  const mssgTwo = document.getElementById( 'mssgTwo' );
+    
+    // e.preventDefault();
+      
+    mssgOne.style.display = 'none'
+    mssgTwo.style.display = 'none'
+    
+    if ( email == '' ) {
+event.preventDefault()
+        mssgOne.style.display = 'block'
+    } 
+    else if ( password == '' ){
+      event.preventDefault()
+        mssgTwo.style.display = 'block'
+    }
+
+    });
+  
+
+
+//OTP login
+document.getElementById( 'requestOTP' ).addEventListener('click', (event) => {
+
+  var email = document.getElementById( 'emailAddress' ).value;
+  const mssgOne = document.getElementById( 'mssgOne' );
+  mssgOne.style.display = 'none'
+
+    if ( email == '' ) {
+        
+        event.preventDefault();
+        mssgOne.style.display = 'block'
+    }
+    else {
+      
+      document.getElementById('inp').value = email
+    }
+});
+
+
+
+</script>
+
+<!-- Mirrored from harnishdesign.net/demo/html/oxyy/login-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 06:03:15 GMT -->
+</html>

@@ -1,0 +1,602 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/shopping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:58 GMT -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Shopping Cart | Assyrian</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- MDB -->
+	<link rel="stylesheet" href="adminstyle/css/mdb.min.css" />
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="adminstyle/css/admin.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+		integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+		crossorigin="anonymous"></script>
+	<!-- favicon
+		============================================ -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+	<!-- Google Fonts
+		============================================ -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic,600' rel='stylesheet'
+		type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap CSS
+		============================================ -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<!-- font awesome CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- jquery-ui CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<!-- social-likes_classic CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/social-likes_classic.css">
+	<!-- venobox CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/venobox.css">
+	<!-- owl.carousel CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<!-- nivo slider CSS
+		============================================ -->
+	<link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
+	<link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
+	<!-- animate CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- normalize CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- meanmenu CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/meanmenu.css">
+	<!-- main CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- style CSS
+		============================================ -->
+	<link rel="stylesheet" href="style.css">
+	<!-- responsive CSS
+		============================================ -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- modernizr JS
+		============================================ -->
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+	<style>
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		input {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body class="home">
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<!-- Add your site or application content here -->
+
+	<%- include('../partials/userNav.ejs') %>
+		<%var items,messOne,products, total%>
+			<div class="clear"></div>
+			<!-- main-container full-width -->
+			<div class="cart-main-area main-container">
+				<div class="entry-header">
+					<h1 class="entry-title">Shopping Cart</h1>
+				</div>
+				<%if(messOne=='notLoggedIn' ){%>
+					<div class="container d-flex justify-content-center" style="min-height: 30vh;">
+						<div class="row align-items-center">
+							<a href="/sign-in">
+								<div class="btn btn btn-light">
+									<h5>Missing Cart items?</h5>
+									<h6>Login to see the items you added previously</h6>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<%}else if (items=='newCart' ) {%>
+
+						<div class="container d-flex justify-content-center" style="min-height: 30vh;">
+							<div class="row align-items-center">
+
+								<a class="btn" href="/">Continue Shopping</a>
+
+							</div>
+						</div>
+
+						<%}else{%>
+
+							<div class="container">
+								<div class="row">
+									<!-- cart-main-area start -->
+									<div class="col-md-12 col-sm-12 col-xs-12">
+
+										<form action="checkout" method="get">
+											<div class="table-content table-responsive">
+												<table>
+													<thead>
+														<tr>
+															<th class="product-thumbnail">Image</th>
+															<th class="product-name">Product</th>
+															<th class="product-price">Price</th>
+															<th class="product-quantity">Quantity</th>
+															<th class="product-remove">Remove</th>
+														</tr>
+													</thead>
+
+													<%items.forEach((x)=>{%>
+														<tbody>
+															<tr>
+																<td class="product-thumbnail"><a href="#"><img
+																			src="/img/product/<%= x.products.imageOne%>"
+																			alt="" /></a></td>
+																<td class="product-name"><a href="#">
+																		<%= x.products.productName%>
+																	</a></td>
+																<td class="product-price"><span class="amount"
+																		id="singlePrice">
+																		<%=x.products.price%>
+																	</span></td>
+																<td class="product-quantity"><button id="decQuantity"
+																		onclick="changeQuantity('<%=x.products._id%>','<%=username._id%>',-1)"
+																		type="button" class="button"
+																		style="border: none; margin-right:4px;">-</button><input
+																		id="<%=x.products._id%>" type="number"
+																		value="<%= x.quantity%>" />
+																	<button
+																		onclick="changeQuantity('<%=x.products._id%>','<%=username._id%>',+1)"
+																		type="button" class="button"
+																		style="border: none;">+</button>
+																</td>
+
+																<td class="product-remove"><a
+																		href="/removeCartItem/<%=x.products._id%>"><i
+																			class="fa fa-times"></i></a></td>
+															</tr>
+
+															<!-- <tr>
+											<td class="product-thumbnail"><a href="#"><img src="img/wishlist/2.jpg" alt="" /></a></td>
+											<td class="product-name"><a href="#">Vestibulum dictum magna</a></td>
+											<td class="product-price"><span class="amount">£50.00</span></td>
+											<td class="product-quantity"><input type="number" value="1" /></td>
+											<td class="product-subtotal">£50.00</td>
+											<td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+										</tr> -->
+														</tbody>
+														<%})%>
+												</table>
+											</div>
+											<div class="row">
+												<div class="col-md-8">
+												</div>
+												<div class="col-md-4">
+													<div class="cart_totals row">
+														<h2 style="text-align:center;">PRICE DETAILS</h2>
+														<table>
+															<tbody>
+																<tr class="cart-subtotal">
+																	<th>Price</th>
+																	<td><span id="totalPrice" class="amount">
+																			<%= total%>
+																		</span>
+																	</td>
+																</tr>
+																<tr class="shipping">
+																	<th>Shipping</th>
+																	<td>
+																		<span class="amount text-success">Free</span>
+																	</td>
+																</tr>
+																<tr class="order-total">
+																	<th>Total</th>
+																	<td>
+																		<strong><span id="grandTotal" class="amount">
+																				<%= total%>
+																			</span></strong>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<div class="wc-proceed-to-checkout row justify-content-center">
+															<button class="btbtn" type="submit"
+																style="border: none;">Proceed to
+																Checkout</button>
+															<input type="hidden" name="userId"
+																value="<%=items.userId%>">
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+
+									</div>
+									<!-- cart-main-area end -->
+								</div>
+
+							</div>
+							<%}%>
+
+
+			</div>
+			<!-- main-container full-width end -->
+
+			<!-- Footer area-->
+			<div class="footer">
+				<!-- Footer top start-->
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 col-sm-12 col-xs-12">
+								<div class="footer-top-left">
+									<h2 class="widget-title">Newsletter</h2>
+									<div class="subscribe-form-area">
+										<form action="#" method="post" class="subscribe-form">
+											<input type="text" placeholder="Enter your email..."
+												title="Enter your email..." name="text-field" id="text-field" />
+											<input type="submit" value="Subscribe" />
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5 col-sm-12 col-xs-12">
+								<div class="footer-top-right">
+									<div class="social-icon-area">
+										<h2 class="widget-title">Follow Us</h2>
+										<ul class="social-icons">
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Facebook" class="facebook social-icon"
+													target="_blank">
+													<i class="fa fa-facebook"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Twitter" class="twitter social-icon"
+													target="_blank">
+													<i class="fa fa-twitter"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Tumblr" class="tumblr social-icon"
+													target="_blank">
+													<i class="fa fa-tumblr"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Google-plus" class="google-plus social-icon"
+													target="_blank">
+													<i class="fa fa-google-plus"></i>
+												</a>
+											</li>
+											<li>
+												<a href="#" data-placement="top" data-bs-toggle="tooltip"
+													data-original-title="Dribbble" class="dribbble social-icon"
+													target="_blank">
+													<i class="fa fa-dribbble"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- Footer top end-->
+				<!-- Footer middle start-->
+				<div class="footer-middle">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">Our services</h3>
+									<div class="menu-our-services-container">
+										<ul class="nav_menu">
+											<li class="menu-item">
+												<a href="#">Shipping &amp; Returns</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Secure Shopping</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">International Shipping</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Affiliates</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Contact</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">My Account</h3>
+									<div class="menu-my-account-container">
+										<ul class="nav_menu">
+											<li class="menu-item">
+												<a href="#">My Account</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Shopping cart</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Wishlist</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Custom Link</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Help</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">Infomation</h3>
+									<div class="menu-infomation-container">
+										<ul class="nav_menu">
+											<li class="menu-item">
+												<a href="#">Our Blog</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">About Our Shop</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Secure Shopping</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Privacy Policy</a>
+											</li>
+											<li class="menu-item">
+												<a href="#">Delivery infomation</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<div class="footer-middle-menu">
+									<h3 class="widget-title">Contact Us</h3>
+									<div class="menu-contact-us-container">
+										<ul>
+											<li>
+												<i class="fa fa-map-marker"> </i>
+												Addresss: 123 Pall Mall, London England
+											</li>
+											<li>
+												<i class="fa fa-envelope"> </i>
+												Email: admin@bootexperts.com
+											</li>
+											<li>
+												<i class="fa fa-phone"> </i>
+												Phone: (+8801) 922262289
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Footer middle end-->
+				<!-- Footer bottom start-->
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 col-sm-12 col-xs-12 fix">
+								<div class="bottom_menu">
+									<div class="menu-customer-care-container">
+										<nav>
+											<ul class="nav_menu">
+												<li class="menu-item">
+													<a href="contact-us.html">Contact us</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Sitemap</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Term &amp; Conditions</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">Gift Vouchers</a>
+												</li>
+												<li class="menu-item">
+													<a href="#">BestSellers</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+								<div class="copyright-info">
+									Copyright &copy; 2021
+									<a href="https://hasthemes.com/">HasThemes.</a>
+									All Rights Reserved
+								</div>
+							</div>
+							<div class="col-lg-5 col-sm-12 col-xs-12">
+								<div class="bottom-right">
+									<a href="#"><img src="img/pay/pay-visa.png" alt="pay-visa" /></a>
+									<a href="#"><img src="img/pay/pay-maestro.png" alt="pay-maestro" /></a>
+									<a href="#"><img src="img/pay/pay-discover.png" alt="pay-discover" /></a>
+									<a href="#"><img src="img/pay/pay-cirrus.png" alt="pay-cirrus" /></a>
+									<a href="#"><img src="img/pay/pay-bank.png" alt="pay-bank" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Footer bottom end-->
+			</div>
+			<!-- Footer area-->
+
+			<!-- jquery
+		============================================ -->
+			<script src="js/vendor/jquery-1.12.4.min.js"></script>
+			<!-- bootstrap JS
+		============================================ -->
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+				integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+				crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+				integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+				crossorigin="anonymous"></script>
+			<!-- wow JS
+		============================================ -->
+			<script src="js/wow.min.js"></script>
+			<!-- price-slider JS
+		============================================ -->
+			<script src="js/jquery-price-slider.js"></script>
+			<!-- collapse JS
+		============================================ -->
+			<script src="js/jquery.collapse.js"></script>
+			<!-- mixitup JS
+		============================================ -->
+			<script src="js/jquery.mixitup.js"></script>
+			<!-- meanmenu JS
+		============================================ -->
+			<script src="js/jquery.meanmenu.js"></script>
+			<!-- owl.carousel JS
+		============================================ -->
+			<script src="js/owl.carousel.min.js"></script>
+			<!-- scrollUp JS
+		============================================ -->
+			<script src="js/jquery.scrollUp.min.js"></script>
+			<!-- social-likes JS
+		============================================ -->
+			<script src="js/social-likes.min.js"></script>
+			<!-- venobox JS
+		============================================ -->
+			<script src="js/venobox.js"></script>
+			<!-- Nivo slider js
+		============================================ -->
+			<script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+			<script src="lib/home.js" type="text/javascript"></script>
+			<!-- plugins JS
+		============================================ -->
+			<script src="js/plugins.js"></script>
+			<!-- main JS
+		============================================ -->
+			<script src="js/main.js"></script>
+
+</body>
+
+<!-- <script>
+
+		let price = document.getElementsByClassName('hlo').value
+		console.log(price)
+		let totalPrice = document.getElementById('totalPrice').innerHTML = price
+
+	</script> -->
+<!-- Mirrored from htmldemo.net/assyrian-v1/assyrian/shopping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 14:44:58 GMT -->
+
+
+<script>
+	$(".button").on("click", function () {
+
+		var $button = $(this);
+		var oldValue = $button.parent().find("input").val();
+
+		if ($button.text() == "+") {
+			var newVal = parseFloat(oldValue) + 1;
+		} else {
+
+			if (oldValue > 1) {
+				var newVal = parseFloat(oldValue) - 1;
+			} else {
+				newVal = 1;
+			}
+		}
+
+		$button.parent().find("input").val(newVal);
+
+	});
+
+
+
+	// change quantity
+
+	function changeQuantity(productId, userId, count) {
+		const singlePrice = document.getElementById('singlePrice').innerHTML
+		const value = document.getElementById(productId).value
+		let finalValue = Number(value) + 1
+		if (value == 1 && count == -1) {
+			document.getElementById('decQuantity').disabled = true
+		}
+		else {
+
+			$.ajax({
+				url: 'changequantity',
+				data: {
+					userId: userId,
+					productId: productId,
+					count: count
+				},
+				method: 'post',
+				success: (resolve) => {
+					console.log(resolve)
+					document.getElementById('decQuantity').disabled = false
+					if (resolve.status == 'blockTheButton') {
+						document.getElementById('totalPrice').innerHTML = '₹' + resolve.totalAmount.total
+						document.getElementById('grandTotal').innerHTML = '₹' + resolve.totalAmount.total
+						document.getElementById('decQuantity').disabled = true
+					} else if (resolve.status == 'incDone') {
+						// document.getElementById('subTotal').innerHTML = '₹'+ singlePrice * finalValue
+						document.getElementById('totalPrice').innerHTML = '₹' + resolve.totalAmount.total
+						document.getElementById('grandTotal').innerHTML = '₹' + resolve.totalAmount.total
+					}
+					else {
+						finalValue = Number(value) - 1
+						console.log(finalValue)
+						// document.getElementById('subTotal').innerHTML = '₹'+ singlePrice * finalValue
+						document.getElementById('grandTotal').innerHTML = '₹' + resolve.totalAmount.total
+						document.getElementById('totalPrice').innerHTML = '₹' + resolve.totalAmount.total
+					}
+				}
+			})
+		}
+		// const singlePrice = document.getElementById('singlePrice').innerHTML
+		// const value = document.getElementById('quantity').value
+		// let subTotal = document.getElementById('subTotal').innerHTML = singlePrice * value
+
+		// if ( count == -1 && value > 0 ) {
+		// 	console.log('-')
+		// 	subTotal = subTotal - singlePrice
+		// 	console.log(Number(subTotal))
+		// }
+		// else {
+		// 	console.log('+')
+		// 	document.getElementById('subTotal').innerHTML = '₹'+ singlePrice * value
+		// }
+	}
+
+</script>
+
+</html>

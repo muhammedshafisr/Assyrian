@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from harnishdesign.net/demo/html/oxyy/login-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 06:03:11 GMT -->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="images/favicon.png" rel="icon" />
+<title>Oxyy - Login and Register Form Html Template</title>
+<meta name="description" content="Login and Register Form Html Template">
+<meta name="author" content="harnishdesign.net">
+
+<!-- Web Fonts
+========================= -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+<!-- Stylesheet
+========================= -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="logincss/stylesheet.css" />
+
+</head>
+<body>
+<%var phone, alertOne%>
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End -->
+
+<div id="main-wrapper" class="oxyy-login-register">
+  <div class="hero-wrap d-flex align-items-center">
+    <div class="hero-mask opacity-4 bg-secondary"></div>
+    <div class="hero-bg hero-bg-scroll" style="background-image:url('images/login-bg-7.jpg');"></div>
+    <div class="hero-content w-100">
+      <div class="container">
+        <div class="row g-0 min-vh-100"> 
+          <!-- Welcome Text
+		  ========================= -->
+          <div class="col-md-6 d-flex flex-column">
+            <div class="row g-0 my-auto">
+              <div class="col-11 col-sm-10 col-lg-9 mx-auto text-center">
+                <div class="logo mt-5 mb-3"> <a href="index.html" title="Oxyy"><img src="/images/logo-1.png" alt="Oxyy"></a> </div>
+                <h1 class="text-5 fw-400 text-white mb-5">We are glad to see you again!</h1>
+                <a class="btn text-5 fw-400 text-white mb-5" href="/home">Back to HOME</a>
+              </div>
+            </div>
+          </div>
+          <!-- Welcome Text End --> 
+            <!-- OTP Form
+		  ========================= -->
+          <div class="col-md-6 d-flex align-items-center py-5">
+            <div class="container my-auto py-4 shadow-lg bg-white">
+              <div class="row">
+                <div class="col-11 col-lg-10 mx-auto">
+                  <h3 class="text-9 fw-600 text-center my-3">Validate OTP</h3>
+                  <p class="text-center"><img class="img-fluid" src="images/otp-icon.png" alt="verification"></p>
+                  <p class="text-muted text-center mb-4">Please enter the OTP (one time password) to verify your account. A code has been sent to <span class="text-dark text-4">+91********<%= phone.toString().slice(8,10)%></span></p>
+                  <p class="text-dark text-center fw-600 mb-3">Enter 4 digit code</p>
+                  <form id="otp-screen" action="login/verify<%= phone%>" method="post">
+                    <div class="row g-3">
+                      <div class="col">
+                        <input type="text" class="form-control rounded-0 text-center text-6 py-2" maxlength="1" name="indexOne" id="indexOne" autocomplete="off">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control rounded-0 text-center text-6 py-2" maxlength="1" name="indexTwo" id="indexTwo" autocomplete="off">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control rounded-0 text-center text-6 py-2" maxlength="1" name="indexThree" id="indexThree" autocomplete="off">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control rounded-0 text-center text-6 py-2" maxlength="1" name="indexFour" id="indexFour" autocomplete="off">
+                      </div>
+                      <p id="alertOne" class="text-danger" style="display: none;">Input box cannot be empty</p>
+                      <p class="text-danger"><%= alertOne%></p>
+                    </div>
+                    <div class="d-grid my-4">
+						<button class="btn btn-dark rounded-0" id="myAnchor" type="submit">Verify</button>
+					</div>
+                  </form>
+                  <p class="text-center">Not received your code? <a href="#"><u>Resend code</u></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- OTP Form End --> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Script --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Style Switcher --> 
+<script src="loginjs/switcher.min.js"></script> 
+<script src="loginjs/theme.js"></script>
+</body>
+<script>
+
+  // document.getElementById("myAnchor").addEventListener("click", function(event){
+    $("#otp-screen").submit(function(e) {
+      const boxOne = document.getElementById('indexOne').value
+      const boxTwo = document.getElementById('indexTwo').value
+      const boxThree = document.getElementById('indexThree').value
+      const boxFour = document.getElementById('indexFour').value
+      document.getElementById('alertOne').style.display = 'none'  
+  
+      if ( boxOne == '' || boxTwo == '' || boxThree == '' || boxFour == '' ) {
+        // event.preventDefault()
+        
+      e.preventDefault();
+  
+        document.getElementById('alertOne').style.display = 'block'
+        
+      }else{
+  
+        
+        $("#otp-screen").submit((e) =>{
+         let btn = document.getElementById('myAnchor').disabled = true 
+        })
+      }
+  
+  });
+  // });
+  
+    </script>
+<!-- Mirrored from harnishdesign.net/demo/html/oxyy/login-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 06:03:15 GMT -->
+</html>
